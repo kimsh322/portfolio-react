@@ -35,7 +35,7 @@ const NavBarContainer = styled.div`
     align-items: center;
     height: 20%;
     background-color: gray;
-    font-size: 3em;
+    font-size: 2.5em;
     text-decoration: none;
     color: black;
   }
