@@ -30,6 +30,9 @@ const GlobalStyle = createGlobalStyle`
         --dark-color1 : #393053 ;
         --dark-color1 : #18122B ;
     }
+    h1,h2,h3 {
+        margin : 0;
+    }
 `;
 
 export default GlobalStyle;

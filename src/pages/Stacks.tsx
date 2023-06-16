@@ -1,14 +1,15 @@
 import styled from "styled-components";
 import StackCard from "../components/stacks/StackCard";
+import { stacksCollection } from "../components/stacks/stacks";
 
 const Stacks = () => {
   return (
     <StacksContainer>
       <h1 className="header">My Stacks</h1>
       <div className="card-container">
-        <StackCard />
-        <StackCard />
-        <StackCard />
+        {stacksCollection.map((stacksArr) => {
+          return <StackCard key={stacksArr[0]} title={stacksArr[0]} stacks={stacksArr[1]} />;
+        })}
       </div>
     </StacksContainer>
   );
@@ -28,8 +29,9 @@ const StacksContainer = styled.div`
   }
   .card-container {
     display: flex;
+    flex-wrap: wrap;
+    align-items: center;
     width: 90%;
-    height: 80%;
-    margin-top: 1%;
+    height: 90%;
   }
 `;
