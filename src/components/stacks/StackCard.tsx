@@ -1,20 +1,19 @@
 import styled from "styled-components";
 import { Stacks } from "./stacks";
+import { useState } from "react";
+import StackImage from "./StackImage";
+import StackDescription from "./StackDescription";
 
-interface Props {
+export interface StackProps {
   title: string;
   stacks: Stacks;
 }
 
-const StackCard = ({ title, stacks }: Props) => {
+const StackCard = ({ title, stacks }: StackProps) => {
+  const [isDescription, setIsDescription] = useState(false);
   return (
-    <StackCardContainer>
-      <h3>{title}</h3>
-      <div>
-        {Object.keys(stacks).map((stack) => {
-          return <img src={stacks[stack]} alt={`${stack}`} key={stack} className="icon" />;
-        })}
-      </div>
+    <StackCardContainer onMouseOver={() => setIsDescription(true)} onMouseOut={() => setIsDescription(false)}>
+      {isDescription ? <StackDescription title={title} stacks={stacks} /> : <StackImage title={title} stacks={stacks} />}
     </StackCardContainer>
   );
 };
@@ -33,13 +32,4 @@ const StackCardContainer = styled.div`
   border-radius: 10px;
   box-shadow: var(--stackcard-shadow) 0px 3px 5px;
   transition: color 0.1s, background-color 0.3s, transform 0.3s;
-  &:hover {
-    transform: translateY(-10px);
-    transition: color 0.1s, background-color 0.3s, transform 0.3s;
-  }
-  .icon {
-    width: 45%;
-    height: 100px;
-    margin: 1% 0;
-  }
 `;
