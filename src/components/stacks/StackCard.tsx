@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { Stacks } from "./stacks";
-import { useState } from "react";
 import StackImage from "./StackImage";
 import StackDescription from "./StackDescription";
 
@@ -10,10 +9,12 @@ export interface StackProps {
 }
 
 const StackCard = ({ title, stacks }: StackProps) => {
-  const [isDescription, setIsDescription] = useState(false);
   return (
-    <StackCardContainer onMouseOver={() => setIsDescription(true)} onMouseOut={() => setIsDescription(false)}>
-      {isDescription ? <StackDescription title={title} stacks={stacks} /> : <StackImage title={title} stacks={stacks} />}
+    <StackCardContainer>
+      <div className="card">
+        <StackDescription title={title} stacks={stacks} />
+        <StackImage title={title} stacks={stacks} />
+      </div>
     </StackCardContainer>
   );
 };
@@ -31,5 +32,14 @@ const StackCardContainer = styled.div`
   padding: 2%;
   border-radius: 10px;
   box-shadow: var(--stackcard-shadow) 0px 3px 5px;
-  transition: color 0.1s, background-color 0.3s, transform 0.3s;
+  &:hover .card {
+    transform: rotateY(180deg);
+  }
+  .card {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: color 0.1s, transform 0.5s;
+    transform-style: preserve-3d;
+  }
 `;
