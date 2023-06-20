@@ -32,6 +32,7 @@ const StackCardContainer = styled.div`
   padding: 2%;
   border-radius: 10px;
   box-shadow: var(--stackcard-shadow) 0px 3px 5px;
+  cursor: pointer;
   &:hover .card {
     transform: rotateY(180deg);
   }
