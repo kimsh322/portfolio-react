@@ -11,8 +11,10 @@ const GlobalStyle = createGlobalStyle`
     :root {
         --background-color : #F8F6F4;
         --font-color1 : #000;
+        --font-color2 : #0A6EBD;
         --stackcard-color : #E3F4F4; 
         --stackcard-shadow : #18122B;
+        --marker-color : #11009E;
 
         --light-color1 : #C4DFDF ;
         --light-color1 : #D2E9E9 ;
@@ -22,8 +24,10 @@ const GlobalStyle = createGlobalStyle`
     .dark-mode {
         --background-color : #18122B;
         --font-color1 : #fff;
+        --font-color2 : #A7ECEE;
         --stackcard-color : #393053;
         --stackcard-shadow : #D2E9E9;
+        --marker-color : #C4B0FF;
 
         --dark-color1 : #635985 ;
         --dark-color1 : #443C68 ;
