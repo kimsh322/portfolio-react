@@ -5,7 +5,6 @@ import { stacksCollection } from "../components/stacks/stacks";
 const Stacks = () => {
   return (
     <StacksContainer>
-      <h1 className="header">My Stacks</h1>
       <div className="card-container">
         {stacksCollection.map((stacksArr) => {
           return <StackCard key={stacksArr[0]} title={stacksArr[0]} stacks={stacksArr[1]} />;
@@ -23,9 +22,7 @@ const StacksContainer = styled.div`
   align-items: center;
   width: 100%;
   padding: 2%;
-  .header {
-    width: 100%;
-  }
+  margin-top: 3%;
   .card-container {
     display: flex;
     flex-wrap: wrap;

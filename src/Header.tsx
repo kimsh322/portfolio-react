@@ -29,18 +29,21 @@ const NavBar = () => {
 
   return (
     <NavBarContainer>
-      <Link className="contents" to="/">
-        About
-      </Link>
-      <Link className="contents" to="/stacks">
-        Stacks
-      </Link>
-      <Link className="contents" to="/archive">
-        Archive
-      </Link>
-      <Link className="contents" to="projects">
-        Projects
-      </Link>
+      <span className="nickname">Sleepygeon's Portfolio</span>
+      <div className="link-container">
+        <Link className="contents" to="/">
+          About
+        </Link>
+        <Link className="contents" to="/stacks">
+          Stacks
+        </Link>
+        <Link className="contents" to="/archive">
+          Archive
+        </Link>
+        <Link className="contents" to="projects">
+          Projects
+        </Link>
+      </div>
       <button onClick={handleMode} className="mode">
         {mode}
       </button>
@@ -52,35 +55,43 @@ export default NavBar;
 
 const NavBarContainer = styled.div`
   display: flex;
-  justify-content: space-around;
+  justify-content: right;
+  align-items: center;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 50px;
-  background-color: skyblue;
+  background-color: var(--header-color);
   z-index: 10;
+  border-bottom: 1px solid gray;
+  .nickname {
+    position: absolute;
+    left: 3%;
+    color: var(--font-color1);
+  }
+  .link-container {
+    display: flex;
+    justify-content: right;
+    width: 40%;
+  }
   .contents {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 0 2%;
     height: 100%;
-    background-color: var(--stackcard-color);
-    font-size: 2.5em;
     text-decoration: none;
     color: var(--font-color1);
-    transition: 0.3s;
   }
   .contents:hover {
-    background-color: aliceblue;
+    color: var(--font-hover-color);
   }
   .mode {
-    position: absolute;
-    top: 5px;
-    right: 5px;
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     cursor: pointer;
     z-index: 5;
+    margin-right: 5px;
   }
 `;

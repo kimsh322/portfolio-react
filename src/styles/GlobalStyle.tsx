@@ -7,11 +7,16 @@ const GlobalStyle = createGlobalStyle`
     body {
         margin : 0;
         font-size: 24px;
+        background-color: var(--background-color);
+        transition: 0.3s;
     }
     :root {
         --background-color : #F8F6F4;
+        --header-color : #A1C2F1;
         --font-color1 : #000;
         --font-color2 : #0A6EBD;
+        --font-hover-color : #DAFFFB;
+        --font-selected-color : #001C30;
         --stackcard-color : #E3F4F4; 
         --stackcard-shadow : #18122B;
         --marker-color : #11009E;
@@ -23,8 +28,11 @@ const GlobalStyle = createGlobalStyle`
     }
     .dark-mode {
         --background-color : #18122B;
+        --header-color : #0A6EBD;
         --font-color1 : #fff;
         --font-color2 : #A7ECEE;
+        --font-hover-color : #001C30;
+        --font-selected-color : #DAFFFB;
         --stackcard-color : #393053;
         --stackcard-shadow : #D2E9E9;
         --marker-color : #C4B0FF;

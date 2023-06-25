@@ -5,7 +5,6 @@ import archiveArr from "../components/archive/archive";
 const Archive = () => {
   return (
     <ArchiveContainer>
-      <h1 className="header">My Archives</h1>
       <div className="card-container">
         {archiveArr.map((archive) => {
           return <ArchiveCard key={archive[0]} title={archive[0]} url={archive[1]} contents={archive[2]} />;
@@ -23,9 +22,7 @@ const ArchiveContainer = styled.div`
   align-items: center;
   width: 100%;
   padding: 2%;
-  .header {
-    width: 100%;
-  }
+  margin-top: 3%;
   .card-container {
     width: 100%;
     height: 100%;

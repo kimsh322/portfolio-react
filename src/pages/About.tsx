@@ -21,6 +21,7 @@ const AboutContainer = styled.div`
   flex-direction: column;
   position: relative;
   width: 100%;
+  height: 1000px;
   padding: 2%;
   .image-box {
     display: flex;
