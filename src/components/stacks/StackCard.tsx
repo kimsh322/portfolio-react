@@ -26,7 +26,7 @@ const StackCardContainer = styled.div`
   flex-shrink: 0;
   flex-direction: column;
   width: 45%;
-  height: 50%;
+  height: 400px;
   background-color: var(--stackcard-color);
   margin: 1% 1%;
   padding: 2%;

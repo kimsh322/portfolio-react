@@ -21,8 +21,7 @@ const ArchiveContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 85%;
-  height: 100%;
+  width: 100%;
   padding: 2%;
   .header {
     width: 100%;

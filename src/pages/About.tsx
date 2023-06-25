@@ -20,7 +20,7 @@ const AboutContainer = styled.div`
   display: flex;
   flex-direction: column;
   position: relative;
-  width: 85%;
+  width: 100%;
   padding: 2%;
   .image-box {
     display: flex;

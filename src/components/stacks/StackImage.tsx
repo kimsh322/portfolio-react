@@ -5,9 +5,13 @@ const StackImage = ({ title, stacks }: StackProps) => {
   return (
     <StackImageContainer>
       <h3 className="title">{title}</h3>
-      <div>
+      <div className="icon-container">
         {Object.keys(stacks).map((stack) => {
-          return <img src={stacks[stack]} alt={`${stack}`} key={stack} className="icon" />;
+          return (
+            <div key={stack} className="icon-box">
+              <img src={stacks[stack]} alt={`${stack}`} className="icon" />
+            </div>
+          );
         })}
       </div>
     </StackImageContainer>
@@ -17,6 +21,10 @@ const StackImage = ({ title, stacks }: StackProps) => {
 export default StackImage;
 
 const StackImageContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   position: absolute;
   width: 100%;
   height: 100%;
@@ -24,9 +32,23 @@ const StackImageContainer = styled.div`
   .title {
     text-align: center;
   }
+  .icon-container {
+    width: 100%;
+    height: 100%;
+    margin-top: 5%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .icon-box {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
   .icon {
-    width: 45%;
-    height: 100px;
-    margin: 1% 0;
+    max-height: 8vw;
+    min-height: 100px;
+    margin: 5%;
   }
 `;

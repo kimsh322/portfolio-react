@@ -21,8 +21,7 @@ const StacksContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 85%;
-  height: 100%;
+  width: 100%;
   padding: 2%;
   .header {
     width: 100%;
@@ -31,6 +30,7 @@ const StacksContainer = styled.div`
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    justify-content: center;
     width: 90%;
     height: 90%;
   }

@@ -33,7 +33,7 @@ const ArchiveCardContainer = styled.div`
   flex-shrink: 0;
   flex-direction: column;
   width: 45%;
-  height: 90%;
+  height: 600px;
   background-color: var(--stackcard-color);
   margin: 1% 1%;
   padding: 4% 2% 2%;
