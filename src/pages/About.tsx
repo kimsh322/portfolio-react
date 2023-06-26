@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import myImage from "../assets/my-image.jpeg";
+import DropDownBox from "../components/about/DropDownBox";
 
 const About = () => {
   return (
@@ -8,8 +9,8 @@ const About = () => {
         <img src={myImage} alt="my-image" className="my-image" />
       </div>
       <h1>안녕하세요!</h1>
-      <h2>기반을 다지면서 나아가는 </h2>
       <h2>프론트엔드 개발자 김수현입니다.</h2>
+      <DropDownBox />
     </AboutContainer>
   );
 };

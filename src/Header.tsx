@@ -40,7 +40,7 @@ const NavBar = () => {
       <div className="link-container">
         {Object.keys(routes).map((route) => {
           return (
-            <Link key={route} className={`contents ${pathname === routes[route] ? "active" : ""}`} to={`${routes[route]}`}>
+            <Link key={route} className={`contents ${pathname === routes[route] ? "active" : ""}`} to={routes[route]}>
               {route}
             </Link>
           );

@@ -8,7 +8,6 @@ const GlobalStyle = createGlobalStyle`
         margin : 0;
         font-size: 24px;
         background-color: var(--background-color);
-        transition: 0.3s;
     }
     :root {
         --background-color : #F8F6F4;
@@ -42,7 +41,7 @@ const GlobalStyle = createGlobalStyle`
         --dark-color1 : #393053 ;
         --dark-color1 : #18122B ;
     }
-    h1,h2,h3 {
+    h1,h2,h3,p {
         margin : 0;
     }
 `;
