@@ -1,6 +1,10 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import styled from "styled-components";
 import { useState, useEffect } from "react";
+
+interface Routes {
+  [key: string]: string;
+}
 
 const NavBar = () => {
   const [mode, setMode] = useState<"dark" | "light">("light");
@@ -26,23 +30,21 @@ const NavBar = () => {
       localStorage.setItem("mode", "dark");
     }
   };
+  // route 매핑 객체
+  const routes: Routes = { About: "/", Stacks: "/stacks", Archive: "/archive", Projects: "/projects" };
+  const { pathname } = useLocation();
 
   return (
     <NavBarContainer>
       <span className="nickname">Sleepygeon's Portfolio</span>
       <div className="link-container">
-        <Link className="contents" to="/">
-          About
-        </Link>
-        <Link className="contents" to="/stacks">
-          Stacks
-        </Link>
-        <Link className="contents" to="/archive">
-          Archive
-        </Link>
-        <Link className="contents" to="projects">
-          Projects
-        </Link>
+        {Object.keys(routes).map((route) => {
+          return (
+            <Link key={route} className={`contents ${pathname === routes[route] ? "active" : ""}`} to={`${routes[route]}`}>
+              {route}
+            </Link>
+          );
+        })}
       </div>
       <button onClick={handleMode} className="mode">
         {mode}
@@ -83,6 +85,9 @@ const NavBarContainer = styled.div`
     height: 100%;
     text-decoration: none;
     color: var(--font-color1);
+  }
+  .active {
+    color: var(--font-hover-color);
   }
   .contents:hover {
     color: var(--font-hover-color);
