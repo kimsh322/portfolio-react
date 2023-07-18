@@ -47,7 +47,7 @@ export default DropDown;
 const DropDownContainer = styled.div<StyleProps>`
   display: flex;
   flex-direction: column;
-  background-color: skyblue;
+  background-color: var(--header-color);
   width: 100%;
   padding: 5px;
   border: 1px solid black;
@@ -69,20 +69,20 @@ const DropDownContainer = styled.div<StyleProps>`
     position: absolute;
     right: 5px;
     top: 5px;
-    transition: 0.3s;
   }
   .reverse {
     transform: rotateX(180deg);
   }
   .contents {
     width: 100%;
-    background-color: #fff;
+    background-color: var(--background-color);
     height: ${({ isActive }) => (isActive ? "300px" : "0px")};
     overflow: hidden;
-    transition: 0.5s;
+    transition: height 0.5s;
   }
   .content {
     padding: 2%;
     font-size: 0.9em;
+    background-color: var(--background-color);
   }
 `;

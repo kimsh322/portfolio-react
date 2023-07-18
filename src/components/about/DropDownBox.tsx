@@ -1,19 +1,27 @@
 import styled from "styled-components";
-import DropDown from "./Dropdown";
-import dropDownContents from "./dropdownContents";
-import { useState } from "react";
+import DropDown from "./DropDown";
+import dropDownContents from "./dropDownContents";
+import { useEffect, useState } from "react";
 
 const DropDownBox = () => {
-  const initialIsActive = [true, false, false, false, false];
+  const initialIsActive = [false, false, false, false, false];
   const [isActive, setIsActive] = useState(initialIsActive);
+
+  useEffect(() => {
+    const renderIsActive = [true, false, false, false, false];
+    setTimeout(() => {
+      setIsActive(renderIsActive);
+    }, 100);
+  }, []);
+
   return (
     <DropDownBoxContainer>
-      {dropDownContents.map((content, idx) => {
+      {dropDownContents.map((contentArr, idx) => {
         return (
           <DropDown
-            key={content[0]}
-            title={content[0]}
-            contents={content[1]}
+            key={contentArr[0]}
+            title={contentArr[0]}
+            contents={contentArr[1]}
             index={idx}
             isActive={isActive}
             setIsActive={setIsActive}
@@ -32,5 +40,4 @@ const DropDownBoxContainer = styled.div`
   width: 50%;
   height: 500px;
   margin-top: 3%;
-  background-color: gray;
 `;
