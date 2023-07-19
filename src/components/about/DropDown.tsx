@@ -56,7 +56,7 @@ const DropDownContainer = styled.div<StyleProps>`
     position: relative;
     cursor: pointer;
     width: 100%;
-    height: 50px;
+    height: 1.5em;
   }
   .icon,
   .title {
@@ -65,10 +65,10 @@ const DropDownContainer = styled.div<StyleProps>`
     align-items: center;
   }
   .icon {
-    font-size: 1.5em;
+    font-size: 1.2em;
     position: absolute;
-    right: 5px;
-    top: 5px;
+    right: 2px;
+    top: 2px;
   }
   .reverse {
     transform: rotateX(180deg);
@@ -76,7 +76,7 @@ const DropDownContainer = styled.div<StyleProps>`
   .contents {
     width: 100%;
     background-color: var(--background-color);
-    height: ${({ isActive }) => (isActive ? "300px" : "0px")};
+    height: ${({ isActive }) => (isActive ? "250px" : "0px")};
     overflow: hidden;
     transition: height 0.5s;
   }

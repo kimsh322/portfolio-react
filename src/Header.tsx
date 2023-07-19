@@ -8,6 +8,7 @@ interface Routes {
 
 const NavBar = () => {
   const [mode, setMode] = useState<"dark" | "light">("light");
+
   // 로컬스토리지에 있는 모드 불러오기
   useEffect(() => {
     const localMode = localStorage.getItem("mode") as "dark" | "light" | null;
@@ -30,17 +31,27 @@ const NavBar = () => {
       localStorage.setItem("mode", "dark");
     }
   };
+
   // route 매핑 객체
-  const routes: Routes = { About: "/", Stacks: "/stacks", Archive: "/archive", Projects: "/projects" };
+  const routes: Routes = {
+    About: "/",
+    Stacks: "/stacks",
+    Archive: "/archive",
+    Projects: "/projects",
+  };
   const { pathname } = useLocation();
 
   return (
     <NavBarContainer>
-      <span className="nickname">Sleepygeon's Portfolio</span>
+      <span className="nickname">Kim's Portfolio</span>
       <div className="link-container">
         {Object.keys(routes).map((route) => {
           return (
-            <Link key={route} className={`contents ${pathname === routes[route] ? "active" : ""}`} to={routes[route]}>
+            <Link
+              key={route}
+              className={`contents ${pathname === routes[route] ? "active" : ""}`}
+              to={routes[route]}
+            >
               {route}
             </Link>
           );
