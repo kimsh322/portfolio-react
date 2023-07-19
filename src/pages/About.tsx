@@ -1,10 +1,16 @@
 import styled from "styled-components";
 import myImage from "../assets/my-image.jpeg";
 import DropDownBox from "../components/about/DropDownBox";
+import { motion } from "framer-motion";
 
 const About = () => {
   return (
-    <AboutContainer>
+    <AboutContainer
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.5 }}
+    >
       <div className="image-box">
         <img src={myImage} alt="my-image" className="my-image" />
       </div>
@@ -17,7 +23,7 @@ const About = () => {
 
 export default About;
 
-const AboutContainer = styled.div`
+const AboutContainer = styled(motion.div)`
   display: flex;
   flex-direction: column;
   position: relative;

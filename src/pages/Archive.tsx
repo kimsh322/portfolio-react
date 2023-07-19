@@ -1,13 +1,26 @@
 import styled from "styled-components";
 import ArchiveCard from "../components/archive/ArchiveCard";
 import archiveArr from "../components/archive/archive";
+import { motion } from "framer-motion";
 
 const Archive = () => {
   return (
-    <ArchiveContainer>
+    <ArchiveContainer
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.5 }}
+    >
       <div className="card-container">
         {archiveArr.map((archive) => {
-          return <ArchiveCard key={archive[0]} title={archive[0]} url={archive[1]} contents={archive[2]} />;
+          return (
+            <ArchiveCard
+              key={archive[0]}
+              title={archive[0]}
+              url={archive[1]}
+              contents={archive[2]}
+            />
+          );
         })}
       </div>
     </ArchiveContainer>
@@ -16,7 +29,7 @@ const Archive = () => {
 
 export default Archive;
 
-const ArchiveContainer = styled.div`
+const ArchiveContainer = styled(motion.div)`
   display: flex;
   flex-direction: column;
   align-items: center;
