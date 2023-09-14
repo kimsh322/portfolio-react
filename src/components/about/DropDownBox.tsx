@@ -40,4 +40,5 @@ const DropDownBoxContainer = styled.div`
   width: 50%;
   height: 500px;
   margin-top: 3%;
+  margin-left: 5%;
 `;

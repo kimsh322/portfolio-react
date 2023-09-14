@@ -9,7 +9,7 @@ interface Props {
 const ArchiveCard = ({ title, url, contents }: Props) => {
   return (
     <ArchiveCardContainer>
-      <h2 className="title">{title}</h2>
+      <h4 className="title">{title}</h4>
       <a className="link" href={url} target="_blank">
         {url}
       </a>
@@ -32,14 +32,15 @@ const ArchiveCardContainer = styled.div`
   display: flex;
   flex-shrink: 0;
   flex-direction: column;
-  width: 45%;
-  height: 600px;
+  width: 50%;
+  height: 300px;
   background-color: var(--stackcard-color);
   margin: 1% 1%;
   padding: 4% 2% 2%;
   border-radius: 10px;
   box-shadow: var(--stackcard-shadow) 0px 3px 5px;
   transition: transform 0.3s;
+  font-size: 0.7em;
   &:hover {
     transform: translateY(-10px);
     transition: transform 0.3s;
