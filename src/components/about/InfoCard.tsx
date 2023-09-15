@@ -1,8 +1,11 @@
 import styled from "styled-components";
+import githubIcon from "../../assets/github.svg";
+import tistoryIcon from "../../assets/tistory.png";
 
 const InfoCard = () => {
   return (
     <InfoCardContainer>
+      <h2>About me</h2>
       <div className="info-box">
         <div>이름</div>
         <div>김수현</div>
@@ -12,8 +15,18 @@ const InfoCard = () => {
         <div>010-9063-2429</div>
       </div>
       <div className="archive-box">
-        <div className="image-box">Github</div>
-        <div className="image-box">Blog</div>
+        <div className="image-box">
+          <span>Github</span>
+          <a href="https://github.com/kimsh322">
+            <img src={githubIcon} alt="github-icon" className="github-icon" />
+          </a>
+        </div>
+        <div className="image-box">
+          <span>Blog</span>
+          <a href="https://riverpigeon.tistory.com/">
+            <img src={tistoryIcon} alt="tistory-icon" className="tistory-icon" />
+          </a>
+        </div>
       </div>
     </InfoCardContainer>
   );
@@ -23,25 +36,41 @@ const InfoCardContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   width: 30%;
-  height: 70%;
+  height: 500px;
   border-radius: 10px;
   background-color: var(--header-color);
-  padding: 2%;
+  padding: 1%;
   .info-box {
     display: grid;
+    align-items: center;
     grid-template-columns: 1fr 1fr;
-    height: 60%;
-    row-gap: 5%;
-    margin-bottom: 3%;
+    width: 100%;
+    height: 50%;
+    row-gap: 3%;
+    margin: 2% 0;
   }
   .archive-box {
     display: flex;
-    background-color: #fff;
     width: 100%;
-    height: 40%;
+    height: 30%;
     justify-content: space-around;
     align-items: center;
+    .image-box {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 50%;
+      height: 100px;
+      .github-icon {
+        width: 100px;
+      }
+      .tistory-icon {
+        width: 180px;
+      }
+    }
   }
 `;
 
