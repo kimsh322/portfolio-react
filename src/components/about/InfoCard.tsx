@@ -1,13 +1,16 @@
 import styled from "styled-components";
 import githubIcon from "../../assets/github.svg";
 import tistoryIcon from "../../assets/tistory.png";
+import { PiFinnTheHumanBold } from "react-icons/pi";
 
 const InfoCard = () => {
   return (
     <InfoCardContainer>
       <h2>About Me</h2>
       <div className="info-box">
-        <div>이름</div>
+        <div>
+          <PiFinnTheHumanBold />
+        </div>
         <div>김수현</div>
         <div>E-mail</div>
         <div>sleepygeon@gmail.com</div>

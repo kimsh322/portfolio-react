@@ -1,10 +1,5 @@
-import { Link, useLocation } from "react-router-dom";
 import styled from "styled-components";
 import { useState, useEffect } from "react";
-
-interface Routes {
-  [key: string]: string;
-}
 
 const NavBar = () => {
   const [mode, setMode] = useState<"dark" | "light">("light");
@@ -32,30 +27,13 @@ const NavBar = () => {
     }
   };
 
-  // route 매핑 객체
-  const routes: Routes = {
-    About: "/",
-    Stacks: "/stacks",
-    Archive: "/archive",
-    Projects: "/projects",
-  };
-  const { pathname } = useLocation();
-
   return (
     <NavBarContainer>
       <span className="nickname">Kim's Portfolio</span>
       <div className="link-container">
-        {Object.keys(routes).map((route) => {
-          return (
-            <Link
-              key={route}
-              className={`contents ${pathname === routes[route] ? "active" : ""}`}
-              to={routes[route]}
-            >
-              {route}
-            </Link>
-          );
-        })}
+        <div className="contents">About</div>
+        <div className="contents">Stacks</div>
+        <div className="contents">Projects</div>
       </div>
       <button onClick={handleMode} className="mode">
         {mode}
