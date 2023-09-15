@@ -1,20 +1,23 @@
+import { useEffect, useState } from "react";
 import styled from "styled-components";
+import archiveArr, { ArchiveArr } from "./archive";
 
 interface Props {
-  title: string;
-  url: string;
-  contents: string[];
+  identifier: "github" | "blog";
 }
 
-const ArchiveCard = ({ title, url, contents }: Props) => {
+const ArchiveCard = ({ identifier }: Props) => {
+  const [parsingArr, setParsingArr] = useState<ArchiveArr>(["", [""]]);
+  useEffect(() => {
+    if (identifier === "github") setParsingArr(archiveArr[0]);
+    if (identifier === "blog") setParsingArr(archiveArr[1]);
+  }, []);
+
   return (
     <ArchiveCardContainer>
-      <h4 className="title">{title}</h4>
-      <a className="link" href={url} target="_blank">
-        {url}
-      </a>
+      <h4 className="title">{parsingArr[0]}</h4>
       <ul className="list-container">
-        {contents.map((content) => {
+        {parsingArr[1].map((content) => {
           return (
             <li className="content-list" key={content}>
               {content}
@@ -32,8 +35,8 @@ const ArchiveCardContainer = styled.div`
   display: flex;
   flex-shrink: 0;
   flex-direction: column;
-  width: 50%;
-  height: 300px;
+  width: 98%;
+  height: 62%;
   background-color: var(--stackcard-color);
   margin: 1% 1%;
   padding: 4% 2% 2%;
@@ -41,6 +44,9 @@ const ArchiveCardContainer = styled.div`
   box-shadow: var(--stackcard-shadow) 0px 3px 5px;
   transition: transform 0.3s;
   font-size: 0.7em;
+  position: absolute;
+  top: 0;
+  left: 0;
   &:hover {
     transform: translateY(-10px);
     transition: transform 0.3s;

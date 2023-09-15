@@ -1,9 +1,8 @@
-type ArchiveArr = [string, string, string[]][];
+export type ArchiveArr = [string, string[]];
 
-const archiveArr: ArchiveArr = [
+const archiveArr: ArchiveArr[] = [
   [
     "Github",
-    "https://github.com/kimsh322",
     [
       "git을 이용한 코드 저장소입니다.",
       "배운 내용과 강의로 배운 내용을 코드로 작성해서 등록하고 있습니다.",
@@ -13,7 +12,6 @@ const archiveArr: ArchiveArr = [
   ],
   [
     "Blog",
-    "https://riverpigeon.tistory.com",
     [
       "공부한 내용을 기록하는 블로그입니다.",
       "부트캠프에서 배운 내용, 기술서적을 읽으면서 알게된 내용을 정리하고 있습니다.",
