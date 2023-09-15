@@ -38,6 +38,6 @@ const DropDownBoxContainer = styled.div`
   display: flex;
   flex-direction: column;
   width: 50%;
-  height: 500px;
+  height: 70vh;
   margin-left: 5%;
 `;

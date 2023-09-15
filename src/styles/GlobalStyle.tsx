@@ -6,7 +6,7 @@ const GlobalStyle = createGlobalStyle`
     }
     body {
         margin : 0;
-        font-size: 24px;
+        font-size: 3vh;
         background-color: var(--background-color);
     }
     :root {

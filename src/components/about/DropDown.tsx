@@ -49,14 +49,14 @@ const DropDownContainer = styled.div<StyleProps>`
   flex-direction: column;
   background-color: var(--header-color);
   width: 100%;
-  padding: 5px;
+  padding: 0.87vh;
   border: 1px solid black;
   .title-box {
     display: flex;
     position: relative;
     cursor: pointer;
     width: 100%;
-    height: 1.5em;
+    height: 5.5vh;
   }
   .icon,
   .title {
@@ -76,7 +76,7 @@ const DropDownContainer = styled.div<StyleProps>`
   .contents {
     width: 100%;
     background-color: var(--background-color);
-    height: ${({ isActive }) => (isActive ? "250px" : "0px")};
+    height: ${({ isActive }) => (isActive ? "11em" : "0px")};
     overflow: hidden;
     transition: height 0.5s;
   }
