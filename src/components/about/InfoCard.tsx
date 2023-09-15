@@ -5,7 +5,7 @@ import tistoryIcon from "../../assets/tistory.png";
 const InfoCard = () => {
   return (
     <InfoCardContainer>
-      <h2>About me</h2>
+      <h2>About Me</h2>
       <div className="info-box">
         <div>이름</div>
         <div>김수현</div>
@@ -41,7 +41,7 @@ const InfoCardContainer = styled.div`
   height: 500px;
   border-radius: 10px;
   background-color: var(--header-color);
-  padding: 1%;
+  padding: 1% 2%;
   .info-box {
     display: grid;
     align-items: center;
