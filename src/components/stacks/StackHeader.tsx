@@ -23,7 +23,7 @@ const StackHeader = ({ tabState, setTabState }: Props) => {
             className={`tab-button ${tabState[index] ? "active" : ""}`}
             onClick={() => handleTab(index)}
           >
-            <h4>{tabName}</h4>
+            <h5>{tabName}</h5>
           </button>
         );
       })}

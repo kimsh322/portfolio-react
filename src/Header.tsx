@@ -56,6 +56,7 @@ const NavBarContainer = styled.div`
   background-color: var(--header-color);
   z-index: 10;
   border-bottom: 1px solid gray;
+  font-family: "GmarketSansBold";
   .nickname {
     position: absolute;
     left: 3%;

@@ -63,6 +63,7 @@ const DropDownContainer = styled.div<StyleProps>`
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: "GmarketSansBold";
   }
   .icon {
     font-size: 1.2em;
@@ -82,7 +83,7 @@ const DropDownContainer = styled.div<StyleProps>`
   }
   .content {
     padding: 2%;
-    font-size: 0.9em;
+    font-size: 0.8em;
     background-color: var(--background-color);
   }
 `;

@@ -77,7 +77,7 @@ const InfoCardContainer = styled.div`
   padding: 0 2%;
   box-shadow: var(--stackcard-shadow) 0px 3px 5px;
   .tag {
-    font-weight: 900;
+    font-family: "GmarketSansBold";
   }
   .info-box {
     display: grid;

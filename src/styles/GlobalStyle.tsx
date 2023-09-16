@@ -1,6 +1,20 @@
 import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
+    @font-face {
+        font-family: 'GmarketSansMedium';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'GmarketSansBold';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+
     * {
         box-sizing: border-box;
     }
@@ -8,6 +22,7 @@ const GlobalStyle = createGlobalStyle`
         margin : 0;
         font-size: 3vh;
         background-color: var(--background-color);
+        font-family: 'GmarketSansMedium';
     }
     :root {
         --background-color : #F8F6F4;
@@ -45,7 +60,10 @@ const GlobalStyle = createGlobalStyle`
         --dark-color1 : #393053 ;
         --dark-color1 : #18122B ;
     }
-    h1,h2,h3,p {
+    h1,h2,h3,h4,h5,h6 {
+        font-family: 'GmarketSansBold';
+    }
+    h1,h2,h3,h4,h5,h6,p {
         margin : 0;
     }
 `;
