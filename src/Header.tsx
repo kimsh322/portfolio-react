@@ -52,7 +52,7 @@ const NavBarContainer = styled.div`
   top: 0;
   left: 0;
   width: 100%;
-  height: 50px;
+  height: 60px;
   background-color: var(--header-color);
   z-index: 10;
   border-bottom: 1px solid gray;

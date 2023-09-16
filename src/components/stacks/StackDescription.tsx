@@ -1,41 +1,50 @@
 import styled from "styled-components";
-import { StackProps } from "./StackCard";
+import { Stacks } from "./stacks";
 
-const StackDescription = ({ title, stacks }: StackProps) => {
+interface Props {
+  tabContent: Stacks;
+}
+
+const StackDescription = ({ tabContent }: Props) => {
   return (
     <StackDescriptionContainer>
-      <h3 className="title">{title}</h3>
-      <ul className="list-container">
-        {Object.keys(stacks).map((stack) => {
-          return (
-            <li key={stack} className="list-item">
-              {stack}
-            </li>
-          );
-        })}
-      </ul>
+      <div className="image-box">
+        <img src={tabContent.image} alt={tabContent.stack} />
+      </div>
+      <div className="description-box">
+        <span className="stack">{tabContent.stack}</span>
+        <p className="description">{tabContent.description}</p>
+      </div>
     </StackDescriptionContainer>
   );
 };
 
-export default StackDescription;
-
 const StackDescriptionContainer = styled.div`
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-  transform: rotateY(180deg);
-  .title {
-    text-align: center;
+  display: flex;
+  .image-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    img {
+      width: 50%;
+    }
   }
-  .list-container {
+  .description-box {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    height: 70%;
-  }
-  .list-item {
-    margin-top: 1%;
+    justify-content: center;
+    width: 50%;
+    height: 100%;
+    .stack {
+      font-weight: 900;
+      margin-bottom: 4%;
+    }
+    .description {
+      font-size: 0.7em;
+    }
   }
 `;
+
+export default StackDescription;

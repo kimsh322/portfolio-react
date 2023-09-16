@@ -49,7 +49,7 @@ const DropDownContainer = styled.div<StyleProps>`
   flex-direction: column;
   background-color: var(--header-color);
   width: 100%;
-  padding: 0.87vh;
+  padding: 1.5vh 1vh 0.25vh;
   border: 1px solid black;
   .title-box {
     display: flex;

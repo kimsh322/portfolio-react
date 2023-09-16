@@ -11,6 +11,8 @@ const GlobalStyle = createGlobalStyle`
     }
     :root {
         --background-color : #F8F6F4;
+        --background-color2 : #ECEE81;
+
         --header-color : #A1C2F1;
         --font-color1 : #000;
         --font-color2 : #0A6EBD;
@@ -27,6 +29,8 @@ const GlobalStyle = createGlobalStyle`
     }
     .dark-mode {
         --background-color : #18122B;
+        --background-color2 : #071952;
+
         --header-color : #0A6EBD;
         --font-color1 : #fff;
         --font-color2 : #A7ECEE;
