@@ -1,14 +1,14 @@
 import styled from "styled-components";
-import StackCard from "../components/stacks/StackCard";
-import { stacksCollection } from "../components/stacks/stacks";
+import StackHeader from "../components/stacks/StackHeader";
+import { useState } from "react";
 
 const Stacks = () => {
+  const initialTabState = [true, false, false, false];
+  const [tabState, setTabState] = useState(initialTabState);
   return (
     <StacksContainer>
-      <div className="card-container">
-        {stacksCollection.map((stacksArr) => {
-          return <StackCard key={stacksArr[0]} title={stacksArr[0]} stacks={stacksArr[1]} />;
-        })}
+      <div className="tab-box">
+        <StackHeader tabState={tabState} setTabState={setTabState} />
       </div>
     </StacksContainer>
   );
@@ -21,14 +21,16 @@ const StacksContainer = styled.div`
   flex-direction: column;
   align-items: center;
   width: 100%;
+  height: 100vh;
   padding: 2%;
   margin-top: 3%;
-  .card-container {
+  .tab-box {
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    width: 90%;
-    height: 90%;
+    background-color: skyblue;
+    width: 70%;
+    height: 80%;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--stackcard-shadow) 0px 3px 5px;
   }
 `;
