@@ -23,7 +23,7 @@ const StackHeader = ({ tabState, setTabState }: Props) => {
             className={`tab-button ${tabState[index] ? "active" : ""}`}
             onClick={() => handleTab(index)}
           >
-            <h5>{tabName}</h5>
+            <span>{tabName}</span>
           </button>
         );
       })}
@@ -37,7 +37,7 @@ const StackHeaderContainer = styled.div`
   height: 15%;
   .tab-button {
     width: 25%;
-    font-size: 0.9em;
+    font-size: 0.8em;
     color: var(--font-color1);
     border: none;
     border-bottom: 1px solid black;

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import githubIcon from "../../assets/github.svg";
+import githubIcon from "../../assets/stacks/github.svg";
 import tistoryIcon from "../../assets/tistory.png";
 import { PiFinnTheHumanBold } from "react-icons/pi";
 import { AiOutlineMail, AiOutlinePhone } from "react-icons/ai";
@@ -12,7 +12,6 @@ const InfoCard = () => {
 
   return (
     <InfoCardContainer>
-      <h2>About Me</h2>
       <div className="info-box">
         <div className="icon-box">
           <PiFinnTheHumanBold />
@@ -75,6 +74,7 @@ const InfoCardContainer = styled.div`
   border-radius: 10px;
   background-color: var(--header-color);
   padding: 0 2%;
+  margin-right: 5%;
   box-shadow: var(--stackcard-shadow) 0px 3px 5px;
   .tag {
     font-family: "GmarketSansBold";

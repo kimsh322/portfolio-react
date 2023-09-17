@@ -60,7 +60,7 @@ const GlobalStyle = createGlobalStyle`
         --dark-color1 : #393053 ;
         --dark-color1 : #18122B ;
     }
-    h1,h2,h3,h4,h5,h6 {
+    h1,h2,h3,h4,h5,h6,button {
         font-family: 'GmarketSansBold';
     }
     h1,h2,h3,h4,h5,h6,p {

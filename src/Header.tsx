@@ -31,9 +31,9 @@ const NavBar = () => {
     <NavBarContainer>
       <span className="nickname">프론트엔드 김수현</span>
       <div className="link-container">
-        <div className="contents">About</div>
-        <div className="contents">Stacks</div>
-        <div className="contents">Projects</div>
+        <button className="contents">About</button>
+        <button className="contents">Stacks</button>
+        <button className="contents">Projects</button>
       </div>
       <button onClick={handleMode} className="mode">
         {mode}
@@ -73,8 +73,12 @@ const NavBarContainer = styled.div`
     align-items: center;
     margin: 0 2%;
     height: 100%;
+    background-color: var(--header-color);
+    border: none;
+    font-size: 1em;
     text-decoration: none;
     color: var(--font-color1);
+    cursor: pointer;
   }
   .active {
     color: var(--font-hover-color);

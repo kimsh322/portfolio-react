@@ -5,8 +5,11 @@ import InfoCard from "../components/about/InfoCard";
 const About = () => {
   return (
     <AboutContainer>
-      <InfoCard />
-      <DropDownBox />
+      <h2>About Me</h2>
+      <div className="about-box">
+        <InfoCard />
+        <DropDownBox />
+      </div>
     </AboutContainer>
   );
 };
@@ -15,10 +18,16 @@ export default About;
 
 const AboutContainer = styled.div`
   display: flex;
+  flex-direction: column;
   position: relative;
   width: 100%;
   height: 90vh;
   padding: 2%;
   justify-content: center;
   align-items: center;
+  .about-box {
+    display: flex;
+    justify-content: center;
+    margin-top: 3%;
+  }
 `;
