@@ -2,7 +2,7 @@ import styled from "styled-components";
 import DropDown from "./DropDown";
 import dropDownContents from "./dropDownContents";
 import { useEffect, useState } from "react";
-import catImg from "../../assets/cat-image.png";
+import catImg from "../../../assets/cat-image.png";
 
 const DropDownBox = () => {
   const initialIsActive = [false, false, false, false, false];

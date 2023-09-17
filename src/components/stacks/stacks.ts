@@ -1,5 +1,3 @@
-import htmlImg from "../../assets/stacks/html-5.svg";
-import cssImg from "../../assets/stacks/css-3.svg";
 import javascriptImg from "../../assets/stacks/javascript.svg";
 import typescriptImg from "../../assets/stacks/typescript-icon.svg";
 import reactImg from "../../assets/stacks/react-original-wordmark.svg";
@@ -22,8 +20,6 @@ type StacksCollection = Stacks[][];
 
 export const stacksCollection: StacksCollection = [
   [
-    { stack: "Html", image: htmlImg, description: "기본적인 마크업 사용이 가능합니다." },
-    { stack: "Css", image: cssImg, description: "" },
     { stack: "Javascript", image: javascriptImg, description: "" },
     { stack: "Typescript", image: typescriptImg, description: "" },
   ],

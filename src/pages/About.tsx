@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import DropDownBox from "../components/about/DropDownBox";
-import InfoCard from "../components/about/InfoCard";
+import DropDownBox from "../components/about/drop-down/DropDownBox";
+import InfoCard from "../components/about/info-card/InfoCard";
 
 const About = () => {
   return (

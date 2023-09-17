@@ -1,10 +1,10 @@
 import styled from "styled-components";
-import githubIcon from "../../assets/stacks/github.svg";
-import tistoryIcon from "../../assets/tistory.png";
-import { PiFinnTheHumanBold } from "react-icons/pi";
-import { AiOutlineMail, AiOutlinePhone } from "react-icons/ai";
+import githubIcon from "../../../assets/stacks/github.svg";
+import tistoryIcon from "../../../assets/tistory.png";
 import { useState } from "react";
 import ArchiveCard from "../archive/ArchiveCard";
+import infoContents from "./infoContents";
+import InfoLine from "./InfoLine";
 
 const InfoCard = () => {
   const [isGithubOpen, setIsGithubOpen] = useState(false);
@@ -13,27 +13,16 @@ const InfoCard = () => {
   return (
     <InfoCardContainer>
       <div className="info-box">
-        <div className="icon-box">
-          <PiFinnTheHumanBold />
-        </div>
-        <div>
-          <p className="tag">이름</p>
-          <p>김수현</p>
-        </div>
-        <div className="icon-box">
-          <AiOutlineMail />
-        </div>
-        <div>
-          <p className="tag">이메일</p>
-          <p>sleepygeon@gmail.com</p>
-        </div>
-        <div className="icon-box">
-          <AiOutlinePhone />
-        </div>
-        <div>
-          <p className="tag">전화번호</p>
-          <p>010-9063-2429</p>
-        </div>
+        {infoContents.map((infoContent) => {
+          return (
+            <InfoLine
+              key={infoContent.title}
+              icon={infoContent.icon}
+              title={infoContent.title}
+              content={infoContent.content}
+            />
+          );
+        })}
       </div>
       <div className="archive-box">
         <div
