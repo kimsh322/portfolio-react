@@ -9,11 +9,16 @@ interface Props {
 interface CarouselBoxProps {
   imageNumber: number;
   carouselTransition: string;
+  maxLength: number;
 }
 
 const CarouselContents = ({ imageNumber, carouselTransition, projectImageContents }: Props) => {
   return (
-    <CarouselContentsContainer imageNumber={imageNumber} carouselTransition={carouselTransition}>
+    <CarouselContentsContainer
+      imageNumber={imageNumber}
+      carouselTransition={carouselTransition}
+      maxLength={projectImageContents.length}
+    >
       {projectImageContents.map((image, idx) => {
         return (
           <div className="image-box">
@@ -33,8 +38,8 @@ const CarouselContentsContainer = styled.div<CarouselBoxProps>`
   padding: 0 20%;
   background-color: gray;
   transform: translateX(
-    ${({ imageNumber }) => {
-      return `${100 - imageNumber * 50}vw`;
+    ${({ imageNumber, maxLength }) => {
+      return `${25 * (-1 + maxLength) - imageNumber * 50}vw`;
     }}
   );
   transition: ${({ carouselTransition }) => carouselTransition};
