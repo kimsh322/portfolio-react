@@ -6,10 +6,11 @@ import CarouselContents from "./CarouselContents";
 
 interface Props {
   projectImgs: string[];
+  imageNumber: number;
+  setImageNumber: React.Dispatch<React.SetStateAction<number>>;
 }
 
-const Carousel = ({ projectImgs }: Props) => {
-  const [imageNumber, setImageNumber] = useState(1);
+const Carousel = ({ projectImgs, imageNumber, setImageNumber }: Props) => {
   const [carouselTransition, setCarouselTransition] = useState("transform 0.5s ease-in-out");
 
   // 왼쪽 오른쪽 더미 생성
