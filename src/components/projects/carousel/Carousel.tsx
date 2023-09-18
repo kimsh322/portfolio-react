@@ -2,43 +2,42 @@ import styled from "styled-components";
 import { BiLeftArrow, BiRightArrow } from "react-icons/bi";
 import { prevHandler, nextHandler, CarouselHandlerArgsType } from "./carouselHandler";
 import { useState } from "react";
-import { ProjectContent } from "../project-contents/typingPractice";
 import CarouselContents from "./CarouselContents";
 
 interface Props {
-  project: ProjectContent;
+  projectImgs: string[];
 }
 
-const Carousel = ({ project }: Props) => {
+const Carousel = ({ projectImgs }: Props) => {
   const [imageNumber, setImageNumber] = useState(1);
   const [carouselTransition, setCarouselTransition] = useState("transform 0.5s ease-in-out");
 
   // 왼쪽 오른쪽 더미 생성
-  const projectImages = [
-    project.image[project.image.length - 1],
-    ...project.image,
-    project.image[0],
+  const projectImageContents = [
+    projectImgs[projectImgs.length - 1],
+    ...projectImgs,
+    projectImgs[0],
   ];
 
-  const carouselArgsArr: CarouselHandlerArgsType = [
+  const carouselHandlerArgs: CarouselHandlerArgsType = {
     imageNumber,
     setImageNumber,
     setCarouselTransition,
-    projectImages.length - 2,
-  ];
+    maxLength: projectImageContents.length - 2,
+  };
 
   return (
     <CarouselContainer>
       <button type="button" className="icon left">
-        <BiLeftArrow onClick={() => prevHandler(carouselArgsArr)} />
+        <BiLeftArrow onClick={() => prevHandler(carouselHandlerArgs)} />
       </button>
       <CarouselContents
         imageNumber={imageNumber}
         carouselTransition={carouselTransition}
-        projectImages={projectImages}
+        projectImageContents={projectImageContents}
       />
       <button type="button" className="icon right">
-        <BiRightArrow onClick={() => nextHandler(carouselArgsArr)} />
+        <BiRightArrow onClick={() => nextHandler(carouselHandlerArgs)} />
       </button>
     </CarouselContainer>
   );

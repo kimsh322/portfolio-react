@@ -3,7 +3,7 @@ import styled from "styled-components";
 interface Props {
   imageNumber: number;
   carouselTransition: string;
-  projectImages: string[];
+  projectImageContents: string[];
 }
 
 interface CarouselBoxProps {
@@ -11,19 +11,17 @@ interface CarouselBoxProps {
   carouselTransition: string;
 }
 
-const CarouselContents = ({ imageNumber, carouselTransition, projectImages }: Props) => {
+const CarouselContents = ({ imageNumber, carouselTransition, projectImageContents }: Props) => {
   return (
-    <>
-      <CarouselContentsContainer imageNumber={imageNumber} carouselTransition={carouselTransition}>
-        {projectImages.map((image, idx) => {
-          return (
-            <div className="image-box">
-              <img src={image} key={idx} alt="project-image" className="project-image" />
-            </div>
-          );
-        })}
-      </CarouselContentsContainer>
-    </>
+    <CarouselContentsContainer imageNumber={imageNumber} carouselTransition={carouselTransition}>
+      {projectImageContents.map((image, idx) => {
+        return (
+          <div className="image-box">
+            <img src={image} key={idx} alt="project-image" className="project-image" />
+          </div>
+        );
+      })}
+    </CarouselContentsContainer>
   );
 };
 

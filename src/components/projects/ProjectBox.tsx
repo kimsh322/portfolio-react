@@ -10,7 +10,7 @@ const ProjectBox = ({ project }: Props) => {
   return (
     <ProjectBoxContainer>
       <h3>{project.title}</h3>
-      <Carousel project={project} />
+      <Carousel projectImgs={project.image} />
       <div className="contents">
         <div className="left-content">왼쪽 인포</div>
         <div className="right-content">오른쪽 설명</div>
