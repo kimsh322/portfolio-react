@@ -1,19 +1,19 @@
 import styled from "styled-components";
 
-const Project = () => {
+const ProjectBox = () => {
   return (
-    <ProjectContainer>
+    <ProjectBoxContainer>
       <h3>프로젝트 이름</h3>
       <div className="carousel">이미지캐러셀</div>
       <div className="contents">
         <div className="left-content">왼쪽 인포</div>
         <div className="right-content">오른쪽 설명</div>
       </div>
-    </ProjectContainer>
+    </ProjectBoxContainer>
   );
 };
 
-const ProjectContainer = styled.div`
+const ProjectBoxContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -43,4 +43,4 @@ const ProjectContainer = styled.div`
   }
 `;
 
-export default Project;
+export default ProjectBox;

@@ -1,11 +1,11 @@
 import styled from "styled-components";
-import Project from "../components/projects/Project";
+import ProjectBox from "../components/projects/ProjectBox";
 
 const Projects = () => {
   return (
     <ProjectsContainer>
       <h2>Projects</h2>
-      <Project />
+      <ProjectBox />
     </ProjectsContainer>
   );
 };
