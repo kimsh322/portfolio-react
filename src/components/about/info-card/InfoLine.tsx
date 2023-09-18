@@ -1,27 +1,29 @@
 import styled from "styled-components";
 import { InfoContent } from "./infoContents";
-import React from "react";
 
 const InfoLine = ({ icon, title, content }: InfoContent) => {
   return (
-    <InfoLineContainer>
-      <div className="icon-box">{icon}</div>
-      <div>
+    <>
+      <IconBox className="icon-box">{icon}</IconBox>
+      <ContentBox>
         <p className="tag">{title}</p>
         <p>{content}</p>
-      </div>
-    </InfoLineContainer>
+      </ContentBox>
+    </>
   );
 };
 
-const InfoLineContainer = styled(React.Fragment)`
+const IconBox = styled.div`
   display: flex;
-  flex-direction: column;
-  .icon-box {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 2em;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+`;
+
+const ContentBox = styled.div`
+  .tag {
+    font-family: "GmarketSansBold";
   }
 `;
+
 export default InfoLine;
