@@ -1,6 +1,8 @@
-import testimg from "../../../assets/cat-image.png";
-import testimg2 from "../../../assets/tistory.png";
-import testimg3 from "../../../assets/stacks/figma.svg";
+import entranceImg from "../../../assets/typing-practice/entrance_page.gif";
+import gameoverImg from "../../../assets/typing-practice/Gameover.gif";
+import matchImg from "../../../assets/typing-practice/match_type.gif";
+import rankingImg from "../../../assets/typing-practice/ranking_rule.gif";
+import startImg from "../../../assets/typing-practice/start.gif";
 
 export interface ProjectContent {
   title: string;
@@ -18,7 +20,7 @@ export interface ProjectContent {
 
 export const typingPractice: ProjectContent = {
   title: "타자연습게임",
-  image: [testimg, testimg2, testimg3],
+  image: [matchImg, entranceImg, startImg, rankingImg, gameoverImg],
   period: "2023.01 ~ 2023.02",
   team: "개인 프로젝트",
   stacks: "Vanilla Javascript",
