@@ -50,8 +50,8 @@ const DropDownContainer = styled.div<StyleProps>`
   background-color: var(--header-color);
   width: 100%;
   padding: 1.5vh 1vh 0.25vh;
-  border: 1px solid var(--background-color);
-  border-bottom: 1.5px solid black;
+  border: 0.2vh solid var(--background-color);
+  border-bottom: 0.3vh solid black;
   z-index: 1;
   .title-box {
     display: flex;
