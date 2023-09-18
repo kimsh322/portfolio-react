@@ -1,3 +1,7 @@
+import testimg from "../../../assets/cat-image.png";
+import testimg2 from "../../../assets/tistory.png";
+import testimg3 from "../../../assets/stacks/figma.svg";
+
 export interface ProjectContent {
   title: string;
   image: string[];
@@ -14,7 +18,7 @@ export interface ProjectContent {
 
 export const typingPractice: ProjectContent = {
   title: "타자연습게임",
-  image: [],
+  image: [testimg, testimg2, testimg3],
   period: "2023.01 ~ 2023.02",
   team: "개인 프로젝트",
   stacks: "Vanilla Javascript",

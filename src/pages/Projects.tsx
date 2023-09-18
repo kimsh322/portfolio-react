@@ -1,11 +1,16 @@
 import styled from "styled-components";
 import ProjectBox from "../components/projects/ProjectBox";
+import { typingPractice } from "../components/projects/project-contents/typingPractice";
+
+const parsingProjects = [typingPractice];
 
 const Projects = () => {
   return (
     <ProjectsContainer>
       <h2>Projects</h2>
-      <ProjectBox />
+      {parsingProjects.map((project) => {
+        return <ProjectBox key={project.title} project={project} />;
+      })}
     </ProjectsContainer>
   );
 };

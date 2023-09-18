@@ -1,10 +1,16 @@
 import styled from "styled-components";
+import Carousel from "./carousel/Carousel";
+import { ProjectContent } from "./project-contents/typingPractice";
 
-const ProjectBox = () => {
+interface Props {
+  project: ProjectContent;
+}
+
+const ProjectBox = ({ project }: Props) => {
   return (
     <ProjectBoxContainer>
-      <h3>프로젝트 이름</h3>
-      <div className="carousel">이미지캐러셀</div>
+      <h3>{project.title}</h3>
+      <Carousel project={project} />
       <div className="contents">
         <div className="left-content">왼쪽 인포</div>
         <div className="right-content">오른쪽 설명</div>
@@ -22,17 +28,12 @@ const ProjectBoxContainer = styled.div`
   height: 1300px;
   margin: 5% 0;
   padding: 2%;
-  .carousel {
-    width: 90%;
-    height: 500px;
-    background-color: #fff;
-    margin-top: 2%;
-  }
   .contents {
     display: flex;
     justify-content: center;
     width: 100%;
     height: 55%;
+    margin-top: 2%;
     .left-content,
     .right-content {
       width: 45%;
