@@ -6,6 +6,7 @@ import startImg from "../../../assets/typing-practice/start.gif";
 
 export interface ProjectContent {
   title: string;
+  introduce: string;
   image: string[];
   period: string;
   team: string;
@@ -20,10 +21,11 @@ export interface ProjectContent {
 
 export const typingPractice: ProjectContent = {
   title: "타자연습게임",
+  introduce: "화면에 나오는 단어를 타자로 쳐서 없애 점수를 얻는 게임입니다.",
   image: [matchImg, entranceImg, startImg, rankingImg, gameoverImg],
   period: "2023.01 ~ 2023.02",
   team: "개인 프로젝트",
-  stacks: "Vanilla Javascript",
+  stacks: "HTML, CSS, Vanilla Javascript",
   link: {
     deploy: "https://kimsh322.github.io/typing-practice/",
     github: "https://github.com/kimsh322/typing-practice",

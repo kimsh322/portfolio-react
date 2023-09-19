@@ -21,8 +21,8 @@ const CarouselContents = ({ imageNumber, carouselTransition, projectImageContent
     >
       {projectImageContents.map((image, idx) => {
         return (
-          <div className="image-box">
-            <img src={image} key={idx} alt="project-image" className="project-image" />
+          <div className="image-box" key={idx}>
+            <img src={image} alt="project-image" className="project-image" />
           </div>
         );
       })}

@@ -2,6 +2,7 @@ import styled from "styled-components";
 import Carousel from "./carousel/Carousel";
 import { ProjectContent } from "./project-contents/typingPractice";
 import { useState } from "react";
+import ProjectInfo from "./project-info/ProjectInfo";
 
 interface Props {
   project: ProjectContent;
@@ -27,7 +28,7 @@ const ProjectBox = ({ project }: Props) => {
       />
       <span>{` ${pageNumber(imageNumber, maxLength)} / ${maxLength}`}</span>
       <div className="contents">
-        <div className="left-content">왼쪽 인포</div>
+        <ProjectInfo project={project} />
         <div className="right-content">오른쪽 설명</div>
       </div>
     </ProjectBoxContainer>
