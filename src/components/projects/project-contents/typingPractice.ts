@@ -16,6 +16,7 @@ export interface ProjectContent {
     github: string;
     blog?: string;
   };
+  implement: string[];
   description: string[];
 }
 
@@ -31,6 +32,11 @@ export const typingPractice: ProjectContent = {
     github: "https://github.com/kimsh322/typing-practice",
     blog: "https://riverpigeon.tistory.com/135",
   },
+  implement: [
+    "화면 내에 단어 랜덤으로 생성, 입력시 삭제 후 점수가 올라가는 시스템 구현",
+    "setInterval을 이용한 간단한 js 애니메이션 구현",
+    "로컬 스토리지를 활용한 랭킹 시스템",
+  ],
   description: [
     "Html, Css, Vanilla Javascript 만을 사용하여 만든 프로젝트입니다.",
     "웹개발 기본을 배운 후 이것으로 실제 웹사이트를 어떻게 만드는지 알고싶어 무작정 시작해봤습니다.",

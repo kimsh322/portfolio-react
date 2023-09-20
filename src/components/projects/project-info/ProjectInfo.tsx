@@ -12,14 +12,6 @@ const ProjectInfo = ({ project }: Props) => {
 
   return (
     <ProjectInfoContainer>
-      {parsingList.map((list, idx) => {
-        return (
-          <li className="info-line" key={list}>
-            <div className="list-title">{parsingTitle[idx]}</div>
-            <div className="list-description">{list}</div>
-          </li>
-        );
-      })}
       <li className="info-line">
         <div className="list-title">관련 링크</div>
         <div className="list-description">
@@ -34,6 +26,28 @@ const ProjectInfo = ({ project }: Props) => {
           </a>
         </div>
       </li>
+      {parsingList.map((list, idx) => {
+        return (
+          <li className="info-line" key={list}>
+            <div className="list-title">{parsingTitle[idx]}</div>
+            <div className="list-description">{list}</div>
+          </li>
+        );
+      })}
+      {
+        <li className="info-line">
+          <div className="list-title">기능</div>
+          <ul className="implement-lists-container">
+            {project.implement.map((list) => {
+              return (
+                <li className="implement-list" key={list}>
+                  {list}
+                </li>
+              );
+            })}
+          </ul>
+        </li>
+      }
     </ProjectInfoContainer>
   );
 };
@@ -64,6 +78,13 @@ const ProjectInfoContainer = styled.ul`
         text-decoration: none;
         margin-right: 0.5em;
         color: var(--font-color2);
+      }
+    }
+    .implement-lists-container {
+      width: 80%;
+      padding: 0;
+      .implement-list {
+        list-style: square;
       }
     }
   }
