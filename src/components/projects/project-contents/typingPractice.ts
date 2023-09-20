@@ -35,7 +35,7 @@ export const typingPractice: ProjectContent = {
   implement: [
     "화면 내에 단어 랜덤으로 생성, 입력시 삭제 후 점수가 올라가는 시스템 구현",
     "setInterval을 이용한 간단한 js 애니메이션 구현",
-    "로컬 스토리지를 활용한 랭킹 시스템",
+    "로컬 스토리지를 활용한 랭킹 시스템 구현",
   ],
   description: [
     "Html, Css, Vanilla Javascript 만을 사용하여 만든 프로젝트입니다.",
