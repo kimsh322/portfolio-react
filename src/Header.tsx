@@ -29,7 +29,7 @@ const NavBar = () => {
 
   return (
     <NavBarContainer>
-      <span className="nickname">프론트엔드 김수현</span>
+      <span className="nickname">김수현 포트폴리오</span>
       <div className="link-container">
         <button className="contents">About</button>
         <button className="contents">Stacks</button>

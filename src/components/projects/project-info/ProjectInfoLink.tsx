@@ -41,7 +41,7 @@ const ProjectInfoLinkContainer = styled.li`
     width: 80%;
     .link {
       text-decoration: none;
-      margin-right: 0.5em;
+      margin-right: 1em;
       color: var(--font-color2);
     }
   }
