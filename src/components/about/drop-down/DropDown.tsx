@@ -79,7 +79,7 @@ const DropDownContainer = styled.div<StyleProps>`
   .contents {
     width: 100%;
     background-color: var(--background-color);
-    height: ${({ isActive }) => (isActive ? "11em" : "0px")};
+    height: ${({ isActive }) => (isActive ? "31.4vh" : "0px")};
     overflow: hidden;
     transition: height 0.5s;
   }

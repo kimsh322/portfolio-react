@@ -80,7 +80,7 @@ const InfoCardContainer = styled.div`
       display: flex;
       justify-content: center;
       align-items: center;
-      font-size: 2em;
+      font-size: 6vh;
     }
   }
   .archive-box {

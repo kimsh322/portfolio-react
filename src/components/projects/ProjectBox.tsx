@@ -42,7 +42,7 @@ const ProjectBoxContainer = styled.div`
   align-items: center;
   background-color: skyblue;
   width: 70%;
-  height: 1300px;
+  height: 1100px;
   margin: 5% 0;
   padding: 2%;
   .contents {

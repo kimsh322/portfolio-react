@@ -24,7 +24,7 @@ const ProjectDescriptionContainer = styled.ul`
   padding: 5% 2%;
   font-size: 0.7em;
   .list {
-    margin-top: 2%;
+    margin-top: 3%;
   }
 `;
 

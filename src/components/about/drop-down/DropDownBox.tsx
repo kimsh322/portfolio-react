@@ -41,7 +41,7 @@ const DropDownBoxContainer = styled.div`
   position: relative;
   flex-direction: column;
   width: 50%;
-  height: calc(71.55vh);
+  height: 70vh;
   overflow: hidden;
   border-radius: 10px;
   box-shadow: var(--stackcard-shadow) 0px 3px 5px;

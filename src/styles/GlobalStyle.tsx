@@ -20,13 +20,14 @@ const GlobalStyle = createGlobalStyle`
     }
     body {
         margin : 0;
-        font-size: 3vh;
+        font-size: 24px;
         background-color: var(--background-color);
         font-family: 'GmarketSansMedium';
     }
     :root {
         --background-color : #F8F6F4;
         --background-color2 : #ECEE81;
+        --border-color : black;
 
         --header-color : #A1C2F1;
         --font-color1 : #000;
@@ -36,15 +37,11 @@ const GlobalStyle = createGlobalStyle`
         --stackcard-color : #E3F4F4; 
         --stackcard-shadow : #18122B;
         --marker-color : #11009E;
-
-        --light-color1 : #C4DFDF ;
-        --light-color1 : #D2E9E9 ;
-        --light-color1 : #E3F4F4 ;
-        --light-color1 : #F8F6F4 ;
     }
     .dark-mode {
         --background-color : #18122B;
         --background-color2 : #071952;
+        --border-color : white;
 
         --header-color : #0A6EBD;
         --font-color1 : #fff;
@@ -54,11 +51,6 @@ const GlobalStyle = createGlobalStyle`
         --stackcard-color : #393053;
         --stackcard-shadow : #D2E9E9;
         --marker-color : #C4B0FF;
-
-        --dark-color1 : #635985 ;
-        --dark-color1 : #443C68 ;
-        --dark-color1 : #393053 ;
-        --dark-color1 : #18122B ;
     }
     h1,h2,h3,h4,h5,h6,button {
         font-family: 'GmarketSansBold';
