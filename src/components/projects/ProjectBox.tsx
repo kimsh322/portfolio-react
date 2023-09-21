@@ -3,6 +3,7 @@ import Carousel from "./carousel/Carousel";
 import { ProjectContent } from "./project-contents/typingPractice";
 import { useState } from "react";
 import ProjectInfo from "./project-info/ProjectInfo";
+import ProjectDescription from "./project-description/ProjectDescription";
 
 interface Props {
   project: ProjectContent;
@@ -29,7 +30,7 @@ const ProjectBox = ({ project }: Props) => {
       <span>{` ${pageNumber(imageNumber, maxLength)} / ${maxLength}`}</span>
       <div className="contents">
         <ProjectInfo project={project} />
-        <div className="right-content">오른쪽 설명</div>
+        <ProjectDescription descriptions={project.description} />
       </div>
     </ProjectBoxContainer>
   );
@@ -50,13 +51,6 @@ const ProjectBoxContainer = styled.div`
     width: 100%;
     height: 55%;
     margin-top: 2%;
-    .left-content,
-    .right-content {
-      width: 45%;
-      height: 100%;
-      background-color: #fff;
-      border: 0.5px solid black;
-    }
   }
 `;
 
