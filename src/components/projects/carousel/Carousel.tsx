@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { BiLeftArrow, BiRightArrow } from "react-icons/bi";
+import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { prevHandler, nextHandler, CarouselHandlerArgsType } from "./carouselHandler";
 import { useState } from "react";
 import CarouselContents from "./CarouselContents";
@@ -30,7 +30,7 @@ const Carousel = ({ projectImgs, imageNumber, setImageNumber }: Props) => {
   return (
     <CarouselContainer>
       <button type="button" className="icon left">
-        <BiLeftArrow onClick={() => prevHandler(carouselHandlerArgs)} />
+        <IoIosArrowBack onClick={() => prevHandler(carouselHandlerArgs)} />
       </button>
       <CarouselContents
         imageNumber={imageNumber}
@@ -38,7 +38,7 @@ const Carousel = ({ projectImgs, imageNumber, setImageNumber }: Props) => {
         projectImageContents={projectImageContents}
       />
       <button type="button" className="icon right">
-        <BiRightArrow onClick={() => nextHandler(carouselHandlerArgs)} />
+        <IoIosArrowForward onClick={() => nextHandler(carouselHandlerArgs)} />
       </button>
     </CarouselContainer>
   );
@@ -50,27 +50,38 @@ const CarouselContainer = styled.div`
   align-items: center;
   width: 90%;
   height: 450px;
-  background-color: gray;
+  background-color: #f8f6f4;
   margin-top: 2%;
   margin-bottom: 1%;
   position: relative;
   overflow: hidden;
+  border-radius: 5px;
   .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: transparent;
     border: none;
     font-size: 2em;
     position: absolute;
     transform: scale(1, 1.5);
     z-index: 1;
+    padding: 0;
+    border-radius: 5px;
     cursor: pointer;
+    transition: color 0.2s, background-color 0.2s;
+    &:hover {
+      background-color: gray;
+      color: white;
+    }
   }
   .left {
-    left: 1%;
+    left: 1.5%;
     top: 50%;
     transform: translateY(-50%);
   }
   .right {
-    right: 1%;
+    right: 1.5%;
     top: 50%;
     transform: translateY(-50%);
   }

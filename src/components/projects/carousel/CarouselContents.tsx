@@ -36,7 +36,7 @@ const CarouselContentsContainer = styled.div<CarouselBoxProps>`
   align-items: center;
   height: 95%;
   padding: 0 20%;
-  background-color: gray;
+  background-color: #f8f6f4;
   transform: translateX(
     ${({ imageNumber, maxLength }) => {
       return `${450 * (-1 + maxLength) - imageNumber * 900}px`;
