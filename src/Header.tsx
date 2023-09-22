@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { useState, useEffect } from "react";
+import { MdDarkMode, MdLightMode } from "react-icons/md";
 
 const NavBar = () => {
   const [mode, setMode] = useState<"dark" | "light">("light");
@@ -36,7 +37,7 @@ const NavBar = () => {
         <button className="contents">Projects</button>
       </div>
       <button onClick={handleMode} className="mode">
-        {mode}
+        {mode === "light" ? <MdDarkMode /> : <MdLightMode />}
       </button>
     </NavBarContainer>
   );
@@ -91,6 +92,14 @@ const NavBarContainer = styled.div`
     height: 40px;
     cursor: pointer;
     z-index: 5;
-    margin-right: 5px;
+    padding: 0;
+    margin-right: 10px;
+    border: none;
+    font-size: 40px;
+    background-color: var(--header-color);
+    color: yellow;
+    &:hover {
+      background-color: var(--header-color);
+    }
   }
 `;

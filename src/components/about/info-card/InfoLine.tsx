@@ -17,12 +17,15 @@ const IconBox = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 2em;
+  font-size: 1.8em;
 `;
 
 const ContentBox = styled.div`
+  width: 80%;
+  font-size: 0.9em;
   .tag {
     font-family: "GmarketSansBold";
+    font-size: 1em;
   }
 `;
 

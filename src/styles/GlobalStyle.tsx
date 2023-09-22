@@ -27,7 +27,6 @@ const GlobalStyle = createGlobalStyle`
     :root {
         --background-color : #F8F6F4;
         --background-color2 : #CAEDFF;
-        --background-color3 : #EDB7ED;
         --border-color : black;
 
         --header-color : #A1C2F1;
@@ -45,7 +44,6 @@ const GlobalStyle = createGlobalStyle`
     .dark-mode {
         --background-color : #0E2954;
         --background-color2 : #1F6E8C;
-        --background-color3 : #5B0888;
         --border-color : white;
 
         --header-color : #0A6EBD;
