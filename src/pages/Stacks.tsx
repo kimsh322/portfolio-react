@@ -33,7 +33,7 @@ const StacksContainer = styled.div`
     var(--background-color2) 0%,
     var(--background-color) 100%
   );
-  transition: background-color 0.3s;
+
   .tab-box {
     display: flex;
     flex-direction: column;

@@ -28,5 +28,4 @@ const AppContainer = styled.div`
   background-color: var(--background-color);
   margin-top: 50px;
   color: var(--font-color1);
-  transition: color 0.3s, background-color 0.3s;
 `;
