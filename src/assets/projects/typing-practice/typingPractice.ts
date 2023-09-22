@@ -4,9 +4,15 @@ import matchImg from "./img/match_type.gif";
 import rankingImg from "./img/ranking_rule.gif";
 import startImg from "./img/start.gif";
 
+export interface TestId {
+  id: string;
+  password: string;
+}
+
 export interface ProjectContents {
   title: string;
   introduce: string;
+  testId?: TestId;
   image: string[];
   period: string;
   team: string;
