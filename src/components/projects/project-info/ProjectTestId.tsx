@@ -7,7 +7,7 @@ interface Props {
 
 const ProjectTestId = ({ testId }: Props) => {
   return (
-    <ProjectTestIdContainer className="info-line">
+    <ProjectTestIdContainer>
       <div className="list-title">테스트</div>
       <div className="list-description">
         <p>아이디 : {testId.id}</p>
