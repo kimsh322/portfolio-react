@@ -38,7 +38,7 @@ const StackDescriptionContainer = styled.div`
     width: 50%;
     height: 100%;
     .stack {
-      font-weight: 900;
+      font-family: "GmarketSansBold";
       margin-bottom: 4%;
     }
     .description {

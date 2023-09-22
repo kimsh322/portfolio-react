@@ -6,7 +6,7 @@ interface Props {
 }
 
 const StackHeader = ({ tabState, setTabState }: Props) => {
-  const tabNames = ["마크업 및 언어", "라이브러리 및 프레임워크", "도구", "지금 관심있는 것들"];
+  const tabNames = ["프로그래밍 언어", "라이브러리 및 프레임워크", "도구", "지금 관심있는 것들"];
 
   const handleTab = (index: number) => {
     const newState = [false, false, false, false];
