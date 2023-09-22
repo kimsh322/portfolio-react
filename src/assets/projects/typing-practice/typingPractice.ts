@@ -1,8 +1,8 @@
-import entranceImg from "../../../assets/typing-practice/entrance_page.gif";
-import gameoverImg from "../../../assets/typing-practice/Gameover.gif";
-import matchImg from "../../../assets/typing-practice/match_type.gif";
-import rankingImg from "../../../assets/typing-practice/ranking_rule.gif";
-import startImg from "../../../assets/typing-practice/start.gif";
+import entranceImg from "./entrance_page.gif";
+import gameoverImg from "./Gameover.gif";
+import matchImg from "./match_type.gif";
+import rankingImg from "./ranking_rule.gif";
+import startImg from "./start.gif";
 
 export interface ProjectContent {
   title: string;

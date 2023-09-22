@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import githubIcon from "../../../assets/stacks/github.svg";
-import tistoryIcon from "../../../assets/tistory.png";
+import githubIcon from "../../../assets/img/stacks/github.svg";
+import tistoryIcon from "../../../assets/img/tistory.png";
 import { useState } from "react";
 import ArchiveCard from "../archive/ArchiveCard";
 import infoContents from "./infoContents";

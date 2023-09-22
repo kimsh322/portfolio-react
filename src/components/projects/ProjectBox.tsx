@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import Carousel from "./carousel/Carousel";
-import { ProjectContent } from "./project-contents/typingPractice";
+import { ProjectContent } from "../../assets/projects/typing-practice/typingPractice";
 import { useState } from "react";
 import ProjectInfo from "./project-info/ProjectInfo";
 import ProjectDescription from "./project-description/ProjectDescription";

@@ -1,14 +1,14 @@
-import javascriptImg from "../../assets/stacks/javascript.svg";
-import typescriptImg from "../../assets/stacks/typescript-icon.svg";
-import reactImg from "../../assets/stacks/react-original-wordmark.svg";
-import reduxImg from "../../assets/stacks/redux-original.svg";
-import styledComponentImg from "../../assets/stacks/file-type-styled.svg";
-import githubImg from "../../assets/stacks/github.svg";
-import figmaImg from "../../assets/stacks/figma.svg";
-import postmanImg from "../../assets/stacks/postman.svg";
-import nextjsImg from "../../assets/stacks/nextjs.svg";
-import recoilImg from "../../assets/stacks/recoil.png";
-import reactQueryImg from "../../assets/stacks/reactquery.svg";
+import javascriptImg from "../../assets/img/stacks/javascript.svg";
+import typescriptImg from "../../assets/img/stacks/typescript-icon.svg";
+import reactImg from "../../assets/img/stacks/react-original-wordmark.svg";
+import reduxImg from "../../assets/img/stacks/redux-original.svg";
+import styledComponentImg from "../../assets/img/stacks/file-type-styled.svg";
+import githubImg from "../../assets/img/stacks/github.svg";
+import figmaImg from "../../assets/img/stacks/figma.svg";
+import postmanImg from "../../assets/img/stacks/postman.svg";
+import nextjsImg from "../../assets/img/stacks/nextjs.svg";
+import recoilImg from "../../assets/img/stacks/recoil.png";
+import reactQueryImg from "../../assets/img/stacks/reactquery.svg";
 
 export interface Stacks {
   stack: string;

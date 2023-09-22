@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import ProjectBox from "../components/projects/ProjectBox";
-import { typingPractice } from "../components/projects/project-contents/typingPractice";
+import { typingPractice } from "../assets/projects/typing-practice/typingPractice";
 
 const parsingProjects = [typingPractice];
 

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { ProjectContent } from "../project-contents/typingPractice";
+import { ProjectContent } from "../../../assets/projects/typing-practice/typingPractice";
 import ProjectInfoLink from "./ProjectInfoLink";
 import ProjectInfoImplement from "./ProjectInfoImplement";
 
