@@ -17,12 +17,12 @@ const ProjectDescription = ({ descriptions }: Props) => {
 
 const ProjectDescriptionContainer = styled.ul`
   width: 45%;
-  height: 100%;
-  background-color: var(--background-color);
+  background-color: var(--project-description-color);
   border: 0.5px solid var(--border-color);
   margin: 0;
   padding: 5% 2%;
   font-size: 0.7em;
+  border-radius: 0 5px 5px 0;
   .list {
     margin-top: 3%;
   }

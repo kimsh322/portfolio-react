@@ -49,9 +49,10 @@ const CarouselContainer = styled.div`
   justify-content: center;
   align-items: center;
   width: 90%;
-  height: 500px;
+  height: 400px;
   background-color: #fff;
   margin-top: 2%;
+  margin-bottom: 1%;
   position: relative;
   overflow: hidden;
   .icon {

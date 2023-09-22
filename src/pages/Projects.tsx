@@ -23,4 +23,5 @@ const ProjectsContainer = styled.div`
   align-items: center;
   width: 100%;
   padding: 2%;
+  background-color: var(--background-color2);
 `;

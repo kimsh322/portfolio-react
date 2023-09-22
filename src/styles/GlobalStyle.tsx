@@ -26,7 +26,8 @@ const GlobalStyle = createGlobalStyle`
     }
     :root {
         --background-color : #F8F6F4;
-        --background-color2 : #ECEE81;
+        --background-color2 : #CAEDFF;
+        --background-color3 : #EDB7ED;
         --border-color : black;
 
         --header-color : #A1C2F1;
@@ -34,13 +35,17 @@ const GlobalStyle = createGlobalStyle`
         --font-color2 : #0A6EBD;
         --font-hover-color : #DAFFFB;
         --font-selected-color : #001C30;
-        --stackcard-color : #E3F4F4; 
+        --stackcard-color : #E4F1FF; 
+        --stack-header-color : #7091F5;
         --stackcard-shadow : #18122B;
         --marker-color : #11009E;
+        --project-background-color : #75C2F6;
+        --project-description-color : #CAEDFF;
     }
     .dark-mode {
-        --background-color : #18122B;
-        --background-color2 : #071952;
+        --background-color : #0E2954;
+        --background-color2 : #1F6E8C;
+        --background-color3 : #5B0888;
         --border-color : white;
 
         --header-color : #0A6EBD;
@@ -48,9 +53,12 @@ const GlobalStyle = createGlobalStyle`
         --font-color2 : #A7ECEE;
         --font-hover-color : #001C30;
         --font-selected-color : #DAFFFB;
-        --stackcard-color : #393053;
+        --stackcard-color : #5C8374;
+        --stack-header-color : #183D3D;
         --stackcard-shadow : #D2E9E9;
         --marker-color : #C4B0FF;
+        --project-background-color : #0E2954;
+        --project-description-color : #1F6E8C;
     }
     h1,h2,h3,h4,h5,h6,button {
         font-family: 'GmarketSansBold';

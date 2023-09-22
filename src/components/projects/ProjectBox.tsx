@@ -40,16 +40,18 @@ const ProjectBoxContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: skyblue;
+  background-color: var(--project-background-color);
   width: 70%;
-  height: 1100px;
+  min-width: 900px;
   margin: 5% 0;
   padding: 2%;
+  box-shadow: var(--stackcard-shadow) 0px 3px 5px;
+  border-radius: 10px;
   .contents {
     display: flex;
     justify-content: center;
     width: 100%;
-    height: 55%;
+    height: 500px;
     margin-top: 2%;
   }
 `;

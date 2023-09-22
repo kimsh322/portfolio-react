@@ -28,7 +28,11 @@ const StacksContainer = styled.div`
   height: 100vh;
   padding: 1%;
   margin-top: 3%;
-  background-color: var(--background-color2);
+  background-image: linear-gradient(
+    to top,
+    var(--background-color2) 0%,
+    var(--background-color) 100%
+  );
   transition: background-color 0.3s;
   .tab-box {
     display: flex;

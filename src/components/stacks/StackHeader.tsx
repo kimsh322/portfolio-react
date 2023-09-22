@@ -41,7 +41,7 @@ const StackHeaderContainer = styled.div`
     color: var(--font-color1);
     border: none;
     border-bottom: 1px solid black;
-    background-color: var(--header-color);
+    background-color: var(--stack-header-color);
     cursor: pointer;
     &:hover {
       background-color: var(--font-hover-color);
