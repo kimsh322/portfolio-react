@@ -3,7 +3,7 @@ import ProjectBox from "../components/projects/ProjectBox";
 import { typingPracticeContents } from "../assets/projects/typing-practice/typingPractice";
 import { todolistContents } from "../assets/projects/todo-list/todolist";
 
-const parsingProjects = [typingPracticeContents, todolistContents];
+const parsingProjects = [todolistContents, typingPracticeContents];
 
 const Projects = () => {
   return (

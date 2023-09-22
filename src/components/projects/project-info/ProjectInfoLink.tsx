@@ -5,23 +5,23 @@ interface Link {
 }
 
 interface Props {
-  link: Link;
+  links: Link;
 }
 
-const ProjectInfoLink = ({ link }: Props) => {
+const ProjectInfoLink = ({ links }: Props) => {
+  const titleArr = ["배포 링크", "Github", "회고 블로그"];
+
   return (
     <ProjectInfoLinkContainer>
       <div className="list-title">관련 링크</div>
       <div className="link-box">
-        <a href={link.deploy} className="link" target="_blank">
-          배포 링크
-        </a>
-        <a href={link.github} className="link" target="_blank">
-          Github
-        </a>
-        <a href={link.blog} className="link" target="_blank">
-          회고 블로그
-        </a>
+        {Object.keys(links).map((link, idx) => {
+          return (
+            <a href={link} className="link" target="_blank">
+              {titleArr[idx]}
+            </a>
+          );
+        })}
       </div>
     </ProjectInfoLinkContainer>
   );

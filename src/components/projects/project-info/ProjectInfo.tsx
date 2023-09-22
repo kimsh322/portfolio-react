@@ -1,10 +1,10 @@
 import styled from "styled-components";
-import { ProjectContent } from "../../../assets/projects/typing-practice/typingPractice";
+import { ProjectContents } from "../../../assets/projects/typing-practice/typingPractice";
 import ProjectInfoLink from "./ProjectInfoLink";
 import ProjectInfoImplement from "./ProjectInfoImplement";
 
 interface Props {
-  project: ProjectContent;
+  project: ProjectContents;
 }
 
 const ProjectInfo = ({ project }: Props) => {
@@ -14,7 +14,7 @@ const ProjectInfo = ({ project }: Props) => {
 
   return (
     <ProjectInfoContainer>
-      <ProjectInfoLink link={project.link} />
+      <ProjectInfoLink links={project.link} />
       {parsingList.map((list, idx) => {
         return (
           <li className="info-line" key={list}>
