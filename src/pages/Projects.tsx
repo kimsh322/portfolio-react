@@ -1,8 +1,9 @@
 import styled from "styled-components";
 import ProjectBox from "../components/projects/ProjectBox";
-import { typingPractice } from "../assets/projects/typing-practice/typingPractice";
+import { typingPracticeContents } from "../assets/projects/typing-practice/typingPractice";
+import { todolistContents } from "../assets/projects/todo-list/todolist";
 
-const parsingProjects = [typingPractice];
+const parsingProjects = [typingPracticeContents, todolistContents];
 
 const Projects = () => {
   return (

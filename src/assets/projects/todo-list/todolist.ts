@@ -1,9 +1,16 @@
-import { ProjectContent } from "../typing-practice/typingPractice";
+import { ProjectContents } from "../typing-practice/typingPractice";
+import mainImg from "./img/main_signin.png";
+import navImg from "./img/nav_and_header.gif";
+import todaylistImg from "./img/todaylist.gif";
+import todayEndImg from "./img/todayend.gif";
+import historyImg from "./img/history.gif";
+import mobileImg1 from "./img/moblie-image1.png";
+import mobileImg2 from "./img/mobile-image2.png";
 
-export const typingPractice: ProjectContent = {
+export const todolistContents: ProjectContents = {
   title: "Todolist",
   introduce: "history를 볼 수 있는 todolist입니다.",
-  image: [],
+  image: [mainImg, navImg, todaylistImg, todayEndImg, historyImg, mobileImg1, mobileImg2],
   period: "2023.03 ~ 2023.04",
   team: "개인 프로젝트",
   stacks: "Typescript, React, Redux, Firebase, Styled-Component",
@@ -18,8 +25,9 @@ export const typingPractice: ProjectContent = {
     "반응형 웹으로 구현",
   ],
   description: [
-    "",
+    "typescript를 이용한 프로젝트입니다.",
     "Firebase의 auth, FireStore를 이용한 인증 및 데이터베이스 사용법에 대해 학습했습니다.",
+    "비슷한 형태의 modal창을 custom hook으로 만들어 반복되는 코드를 줄여보았습니다.",
     "지인의 피드백을 받아 모바일로도 볼 수 있도록 media query를 이용한 반응형웹으로 구현했습니다.",
   ],
 };

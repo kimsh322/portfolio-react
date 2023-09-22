@@ -1,10 +1,10 @@
-import entranceImg from "./entrance_page.gif";
-import gameoverImg from "./Gameover.gif";
-import matchImg from "./match_type.gif";
-import rankingImg from "./ranking_rule.gif";
-import startImg from "./start.gif";
+import entranceImg from "./img/entrance_page.gif";
+import gameoverImg from "./img/Gameover.gif";
+import matchImg from "./img/match_type.gif";
+import rankingImg from "./img/ranking_rule.gif";
+import startImg from "./img/start.gif";
 
-export interface ProjectContent {
+export interface ProjectContents {
   title: string;
   introduce: string;
   image: string[];
@@ -20,7 +20,7 @@ export interface ProjectContent {
   description: string[];
 }
 
-export const typingPractice: ProjectContent = {
+export const typingPracticeContents: ProjectContents = {
   title: "타자연습게임",
   introduce: "화면에 나오는 단어를 타자로 쳐서 없애 점수를 얻는 게임입니다.",
   image: [matchImg, entranceImg, startImg, rankingImg, gameoverImg],
