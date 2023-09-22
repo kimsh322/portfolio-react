@@ -35,6 +35,7 @@ const StacksContainer = styled.div`
     flex-direction: column;
     background-color: skyblue;
     width: 70%;
+    min-width: 900px;
     height: 80%;
     border-radius: 10px;
     overflow: hidden;
