@@ -49,8 +49,8 @@ const CarouselContainer = styled.div`
   justify-content: center;
   align-items: center;
   width: 90%;
-  height: 400px;
-  background-color: #fff;
+  height: 450px;
+  background-color: gray;
   margin-top: 2%;
   margin-bottom: 1%;
   position: relative;

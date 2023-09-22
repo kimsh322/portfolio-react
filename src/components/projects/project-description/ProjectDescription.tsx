@@ -9,7 +9,11 @@ const ProjectDescription = ({ descriptions }: Props) => {
     <ProjectDescriptionContainer>
       <h3>상세 설명</h3>
       {descriptions.map((description) => {
-        return <li className="list">{description}</li>;
+        return (
+          <li className="list" key={description}>
+            {description}
+          </li>
+        );
       })}
     </ProjectDescriptionContainer>
   );

@@ -39,7 +39,7 @@ const CarouselContentsContainer = styled.div<CarouselBoxProps>`
   background-color: gray;
   transform: translateX(
     ${({ imageNumber, maxLength }) => {
-      return `${25 * (-1 + maxLength) - imageNumber * 50}vw`;
+      return `${450 * (-1 + maxLength) - imageNumber * 900}px`;
     }}
   );
   transition: ${({ carouselTransition }) => carouselTransition};
@@ -48,7 +48,7 @@ const CarouselContentsContainer = styled.div<CarouselBoxProps>`
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 50vw;
+    width: 900px;
     height: 95%;
     .project-image {
       min-width: 80%;
