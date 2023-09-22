@@ -2,8 +2,9 @@ import styled from "styled-components";
 import ProjectBox from "../components/projects/ProjectBox";
 import { typingPracticeContents } from "../assets/projects/typing-practice/typingPractice";
 import { todolistContents } from "../assets/projects/todo-list/todolist";
+import { myecostoryContents } from "../assets/projects/myecostory/my-eco-story";
 
-const parsingProjects = [todolistContents, typingPracticeContents];
+const parsingProjects = [myecostoryContents, todolistContents, typingPracticeContents];
 
 const Projects = () => {
   return (
