@@ -24,7 +24,6 @@ function App() {
 
   const handleScrollView = (event: React.MouseEvent<HTMLDivElement>) => {
     const name = event.target as HTMLButtonElement;
-    console.log(name.innerText);
     const category: Category = {
       About: 0,
       Stacks: 1,

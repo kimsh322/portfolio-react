@@ -109,4 +109,21 @@ const NavBarContainer = styled.header<StyleProps>`
       isHeaderColor ? "var(--header-color)" : "transparent"};
     color: yellow;
   }
+  @media (max-width: 700px) {
+    .link-container {
+      width: 100%;
+      justify-content: space-around;
+    }
+    .nickname {
+      display: none;
+    }
+  }
+  @media (max-width: 500px) {
+    .contents {
+      font-size: 0.7em;
+    }
+    .mode {
+      font-size: 1.25em;
+    }
+  }
 `;
