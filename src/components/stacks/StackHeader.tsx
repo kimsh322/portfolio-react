@@ -44,12 +44,12 @@ const StackHeaderContainer = styled.div`
     background-color: var(--stack-header-color);
     cursor: pointer;
     &:hover {
-      background-color: var(--font-hover-color);
+      background-color: var(--stack-header-hover-color);
       transition: 0.3s;
     }
   }
   .active {
-    background-color: var(--font-hover-color);
+    background-color: var(--stack-header-hover-color);
   }
 `;
 

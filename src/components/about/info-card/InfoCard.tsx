@@ -33,6 +33,7 @@ const InfoCard = () => {
           <a href="https://github.com/kimsh322" className="link">
             <span className="tag">GITHUB</span>
             <img src={githubIcon} alt="github-icon" className="github-icon" />
+            <span className="hover-text">hover!</span>
           </a>
         </div>
         <div
@@ -43,6 +44,7 @@ const InfoCard = () => {
           <a href="https://riverpigeon.tistory.com/" className="link">
             <span className="tag">BLOG</span>
             <img src={tistoryIcon} alt="tistory-icon" className="tistory-icon" />
+            <span className="hover-text">hover!</span>
           </a>
         </div>
       </div>
@@ -62,7 +64,6 @@ const InfoCardContainer = styled.div`
   height: 70vh;
   border-radius: 10px;
   background-color: var(--header-color);
-  padding: 0 2%;
   margin-right: 5%;
   box-shadow: var(--stackcard-shadow) 0px 3px 5px;
   .tag {
@@ -70,18 +71,13 @@ const InfoCardContainer = styled.div`
   }
   .info-box {
     display: grid;
+    justify-items: center;
     align-items: center;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 2fr;
     width: 100%;
     height: 50%;
     row-gap: 3%;
     margin: 2% 0;
-    .icon-box {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 6vh;
-    }
   }
   .archive-box {
     display: flex;
@@ -109,7 +105,24 @@ const InfoCardContainer = styled.div`
       .tistory-icon {
         width: 180px;
       }
+      .hover-text {
+        font-size: 0.5em;
+        margin-top: 4px;
+      }
     }
+  }
+  @media (max-width: 1024px) and (min-width: 800px) {
+    width: 70%;
+    font-size: 1.3em;
+    margin: 1% 0 1% 0;
+  }
+  @media (max-width: 800px) {
+    width: 99%;
+    font-size: 1.2em;
+    margin: 1% 0 5% 0;
+  }
+  @media (max-width: 500px) {
+    font-size: 1em;
   }
 `;
 

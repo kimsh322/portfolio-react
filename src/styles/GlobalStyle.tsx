@@ -36,6 +36,7 @@ const GlobalStyle = createGlobalStyle`
         --font-selected-color : #001C30;
         --stackcard-color : #E4F1FF; 
         --stack-header-color : #7091F5;
+        --stack-header-hover-color : #FBF0B2;
         --stackcard-shadow : #18122B;
         --marker-color : #11009E;
         --project-background-color : #75C2F6;
@@ -53,6 +54,7 @@ const GlobalStyle = createGlobalStyle`
         --font-selected-color : #DAFFFB;
         --stackcard-color : #5C8374;
         --stack-header-color : #183D3D;
+        --stack-header-hover-color : #3085C3;
         --stackcard-shadow : #D2E9E9;
         --marker-color : #C4B0FF;
         --project-background-color : #0E2954;

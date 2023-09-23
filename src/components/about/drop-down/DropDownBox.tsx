@@ -40,7 +40,7 @@ const DropDownBoxContainer = styled.div`
   display: flex;
   position: relative;
   flex-direction: column;
-  width: 50%;
+  width: 55%;
   height: 70vh;
   overflow: hidden;
   border-radius: 10px;
@@ -52,5 +52,13 @@ const DropDownBoxContainer = styled.div`
     bottom: 5%;
     left: 50%;
     transform: translate(-50%, 0);
+  }
+  @media (max-width: 1024px) and (min-width: 800px) {
+    width: 90%;
+    margin: 3% 0;
+  }
+  @media (max-width: 800px) {
+    width: 100%;
+    margin: 3% 0;
   }
 `;

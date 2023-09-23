@@ -54,6 +54,12 @@ const ProjectBoxContainer = styled.div`
     height: 600px;
     margin-top: 2%;
   }
+  @media screen and (max-width: 1024px) {
+    .tab-box {
+      width: 100%;
+      min-width: 0px;
+    }
+  }
 `;
 
 export default ProjectBox;

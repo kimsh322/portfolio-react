@@ -60,14 +60,17 @@ const DropDownContainer = styled.div<StyleProps>`
     width: 100%;
     height: 5.5vh;
   }
-  .icon,
   .title {
+    display: flex;
+    align-items: center;
+    width: 92%;
+    font-family: "GmarketSansBold";
+    font-size: 0.9em;
+  }
+  .icon {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: "GmarketSansBold";
-  }
-  .icon {
     font-size: 1.2em;
     position: absolute;
     right: 2px;
@@ -79,13 +82,26 @@ const DropDownContainer = styled.div<StyleProps>`
   .contents {
     width: 100%;
     background-color: var(--background-color);
-    height: ${({ isActive }) => (isActive ? "31.4vh" : "0px")};
+    height: ${({ isActive }) => (isActive ? "31.45vh" : "0px")};
     overflow: hidden;
     transition: height 0.5s;
   }
   .content {
-    padding: 2%;
+    padding: 2% 2% 0.5% 2%;
     font-size: 0.8em;
     background-color: var(--background-color);
+  }
+  @media (max-width: 1150px) and (min-width: 1025px) {
+    .content {
+      font-size: 0.75em;
+    }
+  }
+  @media (max-width: 560px) {
+    .title {
+      font-size: 0.65em;
+    }
+    .content {
+      font-size: 0.6em;
+    }
   }
 `;

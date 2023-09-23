@@ -70,4 +70,19 @@ const ArchiveCardContainer = styled.div`
   .content-list::marker {
     color: var(--marker-color);
   }
+  @media (max-width: 1200px) and (min-width: 800px) {
+    .content-list {
+      font-size: 0.9em;
+    }
+  }
+  @media (max-width: 800px) {
+    .title {
+      margin: 0;
+    }
+  }
+  @media (max-width: 500px) {
+    .content-list {
+      font-size: 0.7em;
+    }
+  }
 `;

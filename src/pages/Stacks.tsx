@@ -46,4 +46,11 @@ const StacksContainer = styled.div`
     margin-top: 3%;
     box-shadow: var(--stackcard-shadow) 0px 3px 5px;
   }
+
+  @media (max-width: 1024px) {
+    .tab-box {
+      width: 100%;
+      min-width: 600px;
+    }
+  }
 `;
