@@ -32,7 +32,7 @@ const GlobalStyle = createGlobalStyle`
         --header-color : #A1C2F1;
         --font-color1 : #000;
         --font-color2 : #0A6EBD;
-        --font-hover-color : #DAFFFB;
+        --font-hover-color : #FBF0B2;
         --font-selected-color : #001C30;
         --stackcard-color : #E4F1FF; 
         --stack-header-color : #7091F5;
@@ -49,7 +49,7 @@ const GlobalStyle = createGlobalStyle`
         --header-color : #0A6EBD;
         --font-color1 : #fff;
         --font-color2 : #A7ECEE;
-        --font-hover-color : #001C30;
+        --font-hover-color : #FFC436;
         --font-selected-color : #DAFFFB;
         --stackcard-color : #5C8374;
         --stack-header-color : #183D3D;

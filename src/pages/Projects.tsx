@@ -24,6 +24,6 @@ const ProjectsContainer = styled.div`
   flex-direction: column;
   align-items: center;
   width: 100%;
-  padding: 2%;
+  padding: 7% 2% 2% 2%;
   background-color: var(--background-color2);
 `;

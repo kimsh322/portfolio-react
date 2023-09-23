@@ -6,23 +6,47 @@ import styled from "styled-components";
 import GlobalStyle from "./styles/GlobalStyle";
 import Footer from "./Footer";
 import Intro from "./pages/Intro";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { handleHeaderColor } from "./util/handleHeaderColor";
 
+interface Category {
+  [key: string]: number;
+}
+
 function App() {
+  // 스크롤시 헤더 색 변경
   const [isHeaderColor, setIsHeaderColor] = useState(false);
   useEffect(() => {
     window.addEventListener("scroll", () => handleHeaderColor(setIsHeaderColor));
   }, []);
 
+  const scrollRef = useRef<any>([]);
+
+  const handleScrollView = (event: React.MouseEvent<HTMLDivElement>) => {
+    const name = event.target as HTMLButtonElement;
+    console.log(name.innerText);
+    const category: Category = {
+      About: 0,
+      Stacks: 1,
+      Projects: 2,
+    };
+    scrollRef.current[category[name.innerText]].scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <AppContainer>
       <GlobalStyle />
-      <Header isHeaderColor={isHeaderColor} />
+      <Header isHeaderColor={isHeaderColor} handleScrollView={handleScrollView} />
       <Intro />
-      <About />
-      <Stacks />
-      <Projects />
+      <div ref={(el) => (scrollRef.current[0] = el)}>
+        <About />
+      </div>
+      <div ref={(el) => (scrollRef.current[1] = el)}>
+        <Stacks />
+      </div>
+      <div ref={(el) => (scrollRef.current[2] = el)}>
+        <Projects />
+      </div>
       <Footer />
     </AppContainer>
   );

@@ -4,9 +4,13 @@ import { MdDarkMode, MdLightMode } from "react-icons/md";
 
 interface Props {
   isHeaderColor: boolean;
+  handleScrollView: any;
+}
+interface StyleProps {
+  isHeaderColor: boolean;
 }
 
-const NavBar = ({ isHeaderColor }: Props) => {
+const NavBar = ({ isHeaderColor, handleScrollView }: Props) => {
   const [mode, setMode] = useState<"dark" | "light">("light");
 
   // 로컬스토리지에 있는 모드 불러오기
@@ -35,7 +39,7 @@ const NavBar = ({ isHeaderColor }: Props) => {
   return (
     <NavBarContainer isHeaderColor={isHeaderColor}>
       <span className="nickname">김수현 포트폴리오</span>
-      <div className="link-container">
+      <div className="link-container" onClick={handleScrollView}>
         <button className="contents">About</button>
         <button className="contents">Stacks</button>
         <button className="contents">Projects</button>
@@ -49,7 +53,7 @@ const NavBar = ({ isHeaderColor }: Props) => {
 
 export default NavBar;
 
-const NavBarContainer = styled.div<Props>`
+const NavBarContainer = styled.header<StyleProps>`
   display: flex;
   justify-content: right;
   align-items: center;
@@ -85,11 +89,11 @@ const NavBarContainer = styled.div<Props>`
     text-decoration: none;
     color: ${({ isHeaderColor }) => (isHeaderColor ? "var(--font-color1)" : "white")};
     cursor: pointer;
+    &:hover {
+      color: var(--font-hover-color);
+    }
   }
   .active {
-    color: var(--font-hover-color);
-  }
-  .contents:hover {
     color: var(--font-hover-color);
   }
   .mode {

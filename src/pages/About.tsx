@@ -25,6 +25,7 @@ const AboutContainer = styled.div`
   padding: 2%;
   justify-content: center;
   align-items: center;
+  padding-top: 7%;
   .about-box {
     display: flex;
     justify-content: center;
