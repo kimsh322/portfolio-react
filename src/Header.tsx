@@ -2,7 +2,11 @@ import styled from "styled-components";
 import { useState, useEffect } from "react";
 import { MdDarkMode, MdLightMode } from "react-icons/md";
 
-const NavBar = () => {
+interface Props {
+  isHeaderColor: boolean;
+}
+
+const NavBar = ({ isHeaderColor }: Props) => {
   const [mode, setMode] = useState<"dark" | "light">("light");
 
   // 로컬스토리지에 있는 모드 불러오기
@@ -29,7 +33,7 @@ const NavBar = () => {
   };
 
   return (
-    <NavBarContainer>
+    <NavBarContainer isHeaderColor={isHeaderColor}>
       <span className="nickname">김수현 포트폴리오</span>
       <div className="link-container">
         <button className="contents">About</button>
@@ -45,7 +49,7 @@ const NavBar = () => {
 
 export default NavBar;
 
-const NavBarContainer = styled.div`
+const NavBarContainer = styled.div<Props>`
   display: flex;
   justify-content: right;
   align-items: center;
@@ -54,14 +58,14 @@ const NavBarContainer = styled.div`
   left: 0;
   width: 100%;
   height: 60px;
-  background-color: var(--header-color);
+  background-color: ${({ isHeaderColor }) =>
+    isHeaderColor ? "var(--header-color)" : "transparent"};
   z-index: 10;
-  border-bottom: 1px solid gray;
   font-family: "GmarketSansBold";
   .nickname {
     position: absolute;
     left: 3%;
-    color: var(--font-color1);
+    color: ${({ isHeaderColor }) => (isHeaderColor ? "var(--font-color1)" : "white")};
   }
   .link-container {
     display: flex;
@@ -74,11 +78,12 @@ const NavBarContainer = styled.div`
     align-items: center;
     margin: 0 2%;
     height: 100%;
-    background-color: var(--header-color);
+    background-color: ${({ isHeaderColor }) =>
+      isHeaderColor ? "var(--header-color)" : "transparent"};
     border: none;
     font-size: 1em;
     text-decoration: none;
-    color: var(--font-color1);
+    color: ${({ isHeaderColor }) => (isHeaderColor ? "var(--font-color1)" : "white")};
     cursor: pointer;
   }
   .active {
@@ -96,10 +101,8 @@ const NavBarContainer = styled.div`
     margin-right: 10px;
     border: none;
     font-size: 40px;
-    background-color: var(--header-color);
+    background-color: ${({ isHeaderColor }) =>
+      isHeaderColor ? "var(--header-color)" : "transparent"};
     color: yellow;
-    &:hover {
-      background-color: var(--header-color);
-    }
   }
 `;

@@ -23,9 +23,10 @@ const IntroContainer = styled.div`
   align-items: center;
   position: relative;
   width: 100%;
-  height: 600px;
+  height: 70vh;
   background-image: url(${spaceImg});
-  background-size: cover;
+  background-size: 100% 150%;
+  background-repeat: no-repeat;
   background-position: 0 -100px;
   color: white;
   .title {

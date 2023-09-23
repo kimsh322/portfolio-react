@@ -6,12 +6,19 @@ import styled from "styled-components";
 import GlobalStyle from "./styles/GlobalStyle";
 import Footer from "./Footer";
 import Intro from "./pages/Intro";
+import { useEffect, useState } from "react";
+import { handleHeaderColor } from "./util/handleHeaderColor";
 
 function App() {
+  const [isHeaderColor, setIsHeaderColor] = useState(false);
+  useEffect(() => {
+    window.addEventListener("scroll", () => handleHeaderColor(setIsHeaderColor));
+  }, []);
+
   return (
     <AppContainer>
       <GlobalStyle />
-      <Header />
+      <Header isHeaderColor={isHeaderColor} />
       <Intro />
       <About />
       <Stacks />
@@ -30,6 +37,5 @@ const AppContainer = styled.div`
   position: relative;
   width: 100%;
   background-color: var(--background-color);
-  margin-top: 50px;
   color: var(--font-color1);
 `;
