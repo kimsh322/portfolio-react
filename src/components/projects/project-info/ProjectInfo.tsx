@@ -9,13 +9,13 @@ interface Props {
 }
 
 const ProjectInfo = ({ project }: Props) => {
-  const { introduce, period, team, stacks } = project;
+  const { introduce, period, team, stacks, link } = project;
   const parsingTitle = ["간단소개", "기간", "팀", "사용스택"];
   const parsingList = [introduce, period, team, stacks];
 
   return (
     <ProjectInfoContainer>
-      <ProjectInfoLink links={project.link} />
+      <ProjectInfoLink links={link} />
       {project.testId && <ProjectTestId testId={project.testId} />}
       {parsingList.map((list, idx) => {
         return (

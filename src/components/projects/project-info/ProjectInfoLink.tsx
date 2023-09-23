@@ -17,7 +17,7 @@ const ProjectInfoLink = ({ links }: Props) => {
       <div className="link-box">
         {Object.keys(links).map((link, idx) => {
           return (
-            <a href={link} className="link" target="_blank">
+            <a href={links[link]} className="link" target="_blank">
               {titleArr[idx]}
             </a>
           );
