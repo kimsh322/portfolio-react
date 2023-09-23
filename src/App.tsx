@@ -4,15 +4,19 @@ import Stacks from "./pages/Stacks";
 import Projects from "./pages/Projects";
 import styled from "styled-components";
 import GlobalStyle from "./styles/GlobalStyle";
+import Footer from "./Footer";
+import Intro from "./pages/Intro";
 
 function App() {
   return (
     <AppContainer>
       <GlobalStyle />
       <Header />
+      <Intro />
       <About />
       <Stacks />
       <Projects />
+      <Footer />
     </AppContainer>
   );
 }
