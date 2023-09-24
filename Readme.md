@@ -7,7 +7,7 @@
 
 ### 배포 링크
 
-    링크 : <https://kimsh322.github.io/portfolio-react/>
+Link : https://kimsh322.github.io/portfolio-react/
 
 ### 사용 Stack
 
