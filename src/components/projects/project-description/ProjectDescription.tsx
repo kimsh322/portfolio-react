@@ -39,6 +39,7 @@ const ProjectDescriptionContainer = styled.ul`
     font-size: 0.6em;
   }
   @media (max-width: 400px) {
+    padding-left: 5.5%;
     font-size: 0.5em;
   }
 `;
