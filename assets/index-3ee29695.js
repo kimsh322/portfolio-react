@@ -557,6 +557,11 @@ Error generating stack: `+i.message+`
   @media (max-width: 1024px) {
     height: 45vw;
   }
+  @media (max-width: 550px) {
+    .icon {
+      font-size: 1.2em;
+    }
+  }
 `,Fh=({links:e})=>{const t=["배포 링크","Github","회고 블로그"];return v.jsxs(Bh,{children:[v.jsx("div",{className:"list-title",children:"관련링크"}),v.jsx("div",{className:"link-box",children:Object.keys(e).map((n,r)=>v.jsx("a",{href:e[n],className:"link",target:"_blank",children:t[r]},t[r]))})]})},Bh=re.li`
   display: flex;
   width: 100%;
@@ -690,7 +695,13 @@ Error generating stack: `+i.message+`
     padding: 5% 4%;
     border-radius: 0 0 5px 5px;
   }
-`,Xh=({project:e})=>{const[t,n]=b.useState(1),r=e.image.length,o=(i,l)=>i===0?l:i>l?1:i;return v.jsxs(Zh,{children:[v.jsx("h3",{children:e.title}),v.jsx(Mh,{projectImgs:e.image,imageNumber:t,setImageNumber:n}),v.jsx("span",{children:` ${o(t,r)} / ${r}`}),v.jsxs("div",{className:"contents",children:[v.jsx(Qh,{project:e}),v.jsx(Yh,{descriptions:e.description})]})]})},Zh=re.div`
+  @media (max-width: 550px) {
+    font-size: 0.6em;
+  }
+  @media (max-width: 400px) {
+    font-size: 0.5em;
+  }
+`,Xh=({project:e})=>{const[t,n]=b.useState(1),r=e.image.length,o=(i,l)=>i===0?l:i>l?1:i;return v.jsxs(Zh,{children:[v.jsx("h3",{children:e.title}),v.jsx(Mh,{projectImgs:e.image,imageNumber:t,setImageNumber:n}),v.jsx("span",{className:"page-number",children:` ${o(t,r)} / ${r}`}),v.jsxs("div",{className:"contents",children:[v.jsx(Qh,{project:e}),v.jsx(Yh,{descriptions:e.description})]})]})},Zh=re.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -716,6 +727,11 @@ Error generating stack: `+i.message+`
       justify-content: start;
       align-items: center;
       height: auto;
+    }
+  }
+  @media (max-width: 550px) {
+    .page-number {
+      font-size: 0.7em;
     }
   }
 `,Jh="/portfolio-react/assets/entrance_page-84eb5f7a.gif",qh="/portfolio-react/assets/Gameover-51aca938.gif",bh="/portfolio-react/assets/match_type-9a396cb3.gif",e1="/portfolio-react/assets/ranking_rule-6f3ad569.gif",t1="/portfolio-react/assets/start-d1785a10.gif",n1={title:"타자연습게임",introduce:"화면에 나오는 단어를 타자로 쳐서 없애 점수를 얻는 게임입니다.",image:[bh,Jh,t1,e1,qh],period:"2023.01 ~ 2023.02",team:"개인 프로젝트",stacks:"HTML, CSS, Vanilla Javascript",link:{deploy:"https://kimsh322.github.io/typing-practice/",github:"https://github.com/kimsh322/typing-practice",blog:"https://riverpigeon.tistory.com/135"},implement:["화면 내에 단어 랜덤으로 생성, 입력시 삭제 후 점수가 올라가는 시스템 구현","setInterval을 이용한 간단한 js 애니메이션 구현","로컬 스토리지를 활용한 랭킹 시스템 구현"],description:["외부모듈 없이 vanilla javascript로 만든 프로젝트입니다.","웹개발 기본을 배운 후 이것으로 실제 웹사이트를 어떻게 만드는지 알고싶어 무작정 시작해봤습니다.","이 프로젝트를 통해 html의 기본 작성법, css 레이아웃 및 정렬, dom 조작 방법 및 간단한 js 애니메이션에 대해 학습하였습니다.","첫 프로젝트를 통해 웹페이지가 어떻게 만들어지는지 알게 되었고, 개발에 몰입하는 계기가 되었습니다."]},r1="/portfolio-react/assets/main_signin-f9009211.png",o1="/portfolio-react/assets/nav_and_header-6f275274.gif",i1="/portfolio-react/assets/todaylist-88fe3da3.gif",l1="/portfolio-react/assets/todayend-111df64c.gif",s1="/portfolio-react/assets/history-81565d8a.gif",u1="/portfolio-react/assets/moblie-image1-b7ca827f.png",a1="/portfolio-react/assets/mobile-image2-265273db.png",c1={title:"Todolist",introduce:"history를 볼 수 있는 todolist입니다.",image:[r1,o1,i1,l1,s1,u1,a1],period:"2023.03 ~ 2023.04",team:"개인 프로젝트",testId:{id:"kim@google.com",password:"qwe123"},stacks:"Typescript, React, Redux, Firebase, Styled-Component",link:{deploy:"https://todolist-75cfc.web.app/",github:"https://github.com/kimsh322/todolist-ts"},implement:["회원가입 및 로그인 기능","할일 List CRUD 기능 및 저장기능","이전에 작성한 Todolist 볼 수 있는 기능","반응형 웹으로 구현"],description:["typescript를 이용한 프로젝트입니다.","달력을 만들어 해당 날짜의 todolist와 메모를 볼 수 있도록 로직을 작성하였습니다.","Redux-toolkit, 세션 스토리지를 활용하여 로그인 상태를 유지했습니다.","Firebase의 auth, FireStore를 이용한 인증 및 데이터베이스 사용법에 대해 학습했습니다.","비슷한 형태의 modal창을 custom hook으로 만들어 반복되는 코드를 줄여보았습니다.","지인의 피드백을 받아 모바일로도 볼 수 있도록 media query를 이용한 반응형웹으로 구현했습니다."]},f1="/portfolio-react/assets/home-img-5bda23b8.png",d1="/portfolio-react/assets/board-list-img-4d61ab4c.png",p1="/portfolio-react/assets/board-detail-img-0920d9c6.png",m1="/portfolio-react/assets/write-img-7b41b88a.png",h1="/portfolio-react/assets/login-img-0a654df4.png",g1="/portfolio-react/assets/user-img-55fc6d4a.png",v1="/portfolio-react/assets/bookmark-img-00374277.png",y1={title:"나만의 친환경",introduce:"친환경 주제의 커뮤니티 웹사이트 입니다.",image:[f1,d1,p1,m1,h1,g1,v1],period:"2023.04 ~ 2023.06",team:"FE 3인 BE 3인",testId:{id:"kim@google.com",password:"qwer1234"},stacks:"Typescript, React, Redux, Styled-Component,Vite, Quill-editor",link:{deploy:"http://ourecostory.s3-website.ap-northeast-2.amazonaws.com/",github:"https://github.com/codestates-seb/seb43_main_007",blog:"https://riverpigeon.tistory.com/207"},implement:["회원가입 및 로그인(Oauth포함) 기능","글쓰기, 댓글쓰기 등 게시판 기능","좋아요, 북마크, 관리자 채택글 기능"],description:["로그인,회원가입, 홈 화면, 마이페이지 북마크 부분을 담당했습니다.","JWT를 통한 인증을 구현하면서 인증보안 관련 학습을 할 수 있었습니다.","React-hook-form 도입을 제안하여 Input 태그의 확장성과 효율성을 확보할 수 있었습니다.","캐러셀 UI를 구현하면서 개발자의 Trick(무한 캐러셀효과)을 학습할 수 있었고, 구현에 있어 생각을 넓힐 수 있는 계기가 되었습니다.","ESlint, Prettier를 사용하여 코드 컨벤션을 통일해 conflict를 최소화하여 작업 효율을 높였습니다.","Github Action을 통한 배포 자동화로 생산성을 향상시켰습니다.","기획부터 배포까지 진행하여 하나의 프로젝트가 어떻게 시작되고 끝나는지 흐름을 파악할 수 있었습니다.","프로젝트를 진행하면서 수시로 요구사항과 기능이 변하는 상황에서 프론트엔드와 벡엔드의 소통의 중요성 학습할 수 있었습니다."]},w1=[y1,c1,n1],x1=()=>v.jsxs(k1,{children:[v.jsx("h2",{children:"Projects"}),w1.map(e=>v.jsx(Xh,{project:e},e.title))]}),k1=re.div`
