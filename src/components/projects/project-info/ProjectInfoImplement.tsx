@@ -38,6 +38,17 @@ const ProjectInfoImplementContainer = styled.li`
       list-style: square;
     }
   }
+  @media (max-width: 1024px) {
+    height: auto;
+  }
+  @media (max-width: 550px) {
+    margin-top: 10px;
+  }
+  @media (max-width: 400px) {
+    .list-title {
+      font-size: 0.9em;
+    }
+  }
 `;
 
 export default ProjectInfoImplement;

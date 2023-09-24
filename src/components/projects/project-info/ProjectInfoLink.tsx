@@ -13,7 +13,7 @@ const ProjectInfoLink = ({ links }: Props) => {
 
   return (
     <ProjectInfoLinkContainer>
-      <div className="list-title">관련 링크</div>
+      <div className="list-title">관련링크</div>
       <div className="link-box">
         {Object.keys(links).map((link, idx) => {
           return (
@@ -43,6 +43,14 @@ const ProjectInfoLinkContainer = styled.li`
       text-decoration: none;
       margin-right: 1em;
       color: var(--font-color2);
+    }
+  }
+  @media (max-width: 1024px) {
+    height: 50px;
+  }
+  @media (max-width: 400px) {
+    .list-title {
+      font-size: 0.9em;
     }
   }
 `;

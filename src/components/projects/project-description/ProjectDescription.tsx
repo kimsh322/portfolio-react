@@ -30,6 +30,11 @@ const ProjectDescriptionContainer = styled.ul`
   .list {
     margin-top: 3%;
   }
+  @media (max-width: 1024px) {
+    width: 90%;
+    padding: 5% 4%;
+    border-radius: 0 0 5px 5px;
+  }
 `;
 
 export default ProjectDescription;

@@ -85,6 +85,9 @@ const CarouselContainer = styled.div`
     top: 50%;
     transform: translateY(-50%);
   }
+  @media (max-width: 1024px) {
+    height: 45vw;
+  }
 `;
 
 export default Carousel;

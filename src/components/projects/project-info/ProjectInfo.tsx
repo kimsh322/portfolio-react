@@ -54,6 +54,24 @@ const ProjectInfoContainer = styled.ul`
       width: 80%;
     }
   }
+  @media (max-width: 1024px) {
+    width: 90%;
+    padding: 3% 2%;
+    border-radius: 5px 5px 0 0;
+    .info-line {
+      height: 50px;
+    }
+  }
+  @media (max-width: 550px) {
+    font-size: 0.6em;
+  }
+  @media (max-width: 400px) {
+    .info-line {
+      .list-title {
+        font-size: 0.9em;
+      }
+    }
+  }
 `;
 
 export default ProjectInfo;

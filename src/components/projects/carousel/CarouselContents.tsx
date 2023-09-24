@@ -55,6 +55,13 @@ const CarouselContentsContainer = styled.div<CarouselBoxProps>`
       max-height: 100%;
     }
   }
+  @media (max-width: 1024px) {
+    .image-box {
+      .project-image {
+        min-width: 0;
+      }
+    }
+  }
 `;
 
 export default CarouselContents;

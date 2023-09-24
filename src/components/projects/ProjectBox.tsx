@@ -54,10 +54,14 @@ const ProjectBoxContainer = styled.div`
     height: 600px;
     margin-top: 2%;
   }
-  @media screen and (max-width: 1024px) {
-    .tab-box {
-      width: 100%;
-      min-width: 0px;
+  @media (max-width: 1024px) {
+    width: 100%;
+    min-width: 0px;
+    .contents {
+      flex-direction: column;
+      justify-content: start;
+      align-items: center;
+      height: auto;
     }
   }
 `;

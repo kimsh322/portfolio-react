@@ -10,7 +10,7 @@ const ProjectTestId = ({ testId }: Props) => {
     <ProjectTestIdContainer>
       <div className="list-title">테스트</div>
       <div className="list-description">
-        <p>아이디 : {testId.id}</p>
+        <p className="test-id">아이디 : {testId.id}</p>
         <p>비밀번호 : {testId.password}</p>
       </div>
     </ProjectTestIdContainer>
@@ -29,6 +29,14 @@ const ProjectTestIdContainer = styled.li`
   }
   .list-description {
     width: 80%;
+  }
+  @media (max-width: 1024px) {
+    height: 50px;
+  }
+  @media (max-width: 400px) {
+    .list-title {
+      font-size: 0.9em;
+    }
   }
 `;
 
