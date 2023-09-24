@@ -1,6 +1,14 @@
-### Portfolio 만들기
+# Portfolio
 
-### 사용할 Stack
+    프론트엔드 개발자 포트폴리오 입니다.
+    반응형으로 구현되어 있습니다.
 
-    React, Vite, Typescript, Recoil, CSS-module(?)
-    나머지는 차차 생각해보기
+<img src="./public/thumbnail.png" width="600px" height="300px"  alt="thumbnail"></img>
+
+### 배포 링크
+
+    https://kimsh322.github.io/portfolio-react/
+
+### 사용 Stack
+
+    React, Vite, Typescript, Styled-Component
