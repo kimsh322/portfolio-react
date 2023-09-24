@@ -10,7 +10,7 @@ interface StyleProps {
   isHeaderColor: boolean;
 }
 
-const NavBar = ({ isHeaderColor, handleScrollView }: Props) => {
+const Header = ({ isHeaderColor, handleScrollView }: Props) => {
   const [mode, setMode] = useState<"dark" | "light">("light");
 
   // 로컬스토리지에 있는 모드 불러오기
@@ -37,7 +37,7 @@ const NavBar = ({ isHeaderColor, handleScrollView }: Props) => {
   };
 
   return (
-    <NavBarContainer isHeaderColor={isHeaderColor}>
+    <HeaderContainer isHeaderColor={isHeaderColor}>
       <span className="nickname">김수현 포트폴리오</span>
       <div className="link-container" onClick={handleScrollView}>
         <button className="contents">About</button>
@@ -47,13 +47,13 @@ const NavBar = ({ isHeaderColor, handleScrollView }: Props) => {
       <button onClick={handleMode} className="mode">
         {mode === "light" ? <MdDarkMode /> : <MdLightMode />}
       </button>
-    </NavBarContainer>
+    </HeaderContainer>
   );
 };
 
-export default NavBar;
+export default Header;
 
-const NavBarContainer = styled.header<StyleProps>`
+const HeaderContainer = styled.header<StyleProps>`
   display: flex;
   justify-content: right;
   align-items: center;
