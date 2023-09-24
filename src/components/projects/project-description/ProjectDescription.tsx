@@ -35,6 +35,12 @@ const ProjectDescriptionContainer = styled.ul`
     padding: 5% 4%;
     border-radius: 0 0 5px 5px;
   }
+  @media (max-width: 550px) {
+    font-size: 0.6em;
+  }
+  @media (max-width: 400px) {
+    font-size: 0.5em;
+  }
 `;
 
 export default ProjectDescription;

@@ -88,6 +88,11 @@ const CarouselContainer = styled.div`
   @media (max-width: 1024px) {
     height: 45vw;
   }
+  @media (max-width: 550px) {
+    .icon {
+      font-size: 1.2em;
+    }
+  }
 `;
 
 export default Carousel;

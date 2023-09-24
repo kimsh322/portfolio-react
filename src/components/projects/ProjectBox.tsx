@@ -27,7 +27,7 @@ const ProjectBox = ({ project }: Props) => {
         imageNumber={imageNumber}
         setImageNumber={setImageNumber}
       />
-      <span>{` ${pageNumber(imageNumber, maxLength)} / ${maxLength}`}</span>
+      <span className="page-number">{` ${pageNumber(imageNumber, maxLength)} / ${maxLength}`}</span>
       <div className="contents">
         <ProjectInfo project={project} />
         <ProjectDescription descriptions={project.description} />
@@ -62,6 +62,11 @@ const ProjectBoxContainer = styled.div`
       justify-content: start;
       align-items: center;
       height: auto;
+    }
+  }
+  @media (max-width: 550px) {
+    .page-number {
+      font-size: 0.7em;
     }
   }
 `;
