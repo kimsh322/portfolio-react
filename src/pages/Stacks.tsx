@@ -25,7 +25,7 @@ const StacksContainer = styled.div`
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 100vh;
+  height: 750px;
   padding: 1%;
   margin-top: 3%;
   background-image: linear-gradient(
@@ -50,7 +50,7 @@ const StacksContainer = styled.div`
   @media (max-width: 1024px) {
     .tab-box {
       width: 100%;
-      min-width: 600px;
+      min-width: 0px;
     }
   }
 `;

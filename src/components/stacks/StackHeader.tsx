@@ -51,6 +51,11 @@ const StackHeaderContainer = styled.div`
   .active {
     background-color: var(--stack-header-hover-color);
   }
+  @media (max-width: 450px) {
+    .tab-button {
+      font-size: 0.6em;
+    }
+  }
 `;
 
 export default StackHeader;

@@ -28,7 +28,7 @@ const StackDescriptionContainer = styled.div`
     width: 50%;
     height: 100%;
     img {
-      width: 50%;
+      width: 100px;
     }
   }
   .description-box {
@@ -39,11 +39,24 @@ const StackDescriptionContainer = styled.div`
     height: 100%;
     .stack {
       font-family: "GmarketSansBold";
-      font-size: 1.4vw;
+      font-size: 1em;
       margin-bottom: 4%;
     }
     .description {
       font-size: 0.7em;
+    }
+  }
+  @media (max-width: 650px) {
+    margin-bottom: 20px;
+  }
+  @media (max-width: 450px) {
+    .description-box {
+      .stack {
+        font-size: 0.8em;
+      }
+      .description {
+        font-size: 0.6em;
+      }
     }
   }
 `;

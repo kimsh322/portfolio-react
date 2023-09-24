@@ -31,6 +31,11 @@ const StackContentsContainer = styled.div`
   width: 100%;
   height: 85%;
   padding: 2%;
+  @media (max-width: 650px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 `;
 
 export default StackContents;
