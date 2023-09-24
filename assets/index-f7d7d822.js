@@ -699,6 +699,7 @@ Error generating stack: `+i.message+`
     font-size: 0.6em;
   }
   @media (max-width: 400px) {
+    padding-left: 5.5%;
     font-size: 0.5em;
   }
 `,Xh=({project:e})=>{const[t,n]=b.useState(1),r=e.image.length,o=(i,l)=>i===0?l:i>l?1:i;return v.jsxs(Zh,{children:[v.jsx("h3",{children:e.title}),v.jsx(Mh,{projectImgs:e.image,imageNumber:t,setImageNumber:n}),v.jsx("span",{className:"page-number",children:` ${o(t,r)} / ${r}`}),v.jsxs("div",{className:"contents",children:[v.jsx(Qh,{project:e}),v.jsx(Yh,{descriptions:e.description})]})]})},Zh=re.div`
