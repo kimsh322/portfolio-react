@@ -47,7 +47,7 @@ export default DropDown;
 const DropDownContainer = styled.div<StyleProps>`
   display: flex;
   flex-direction: column;
-  background-color: var(--header-color);
+  background-color: var(--about-color);
   width: 100%;
   padding: 1.5vh 1vh 0.25vh;
   border: 0.2vh solid var(--background-color);

@@ -29,7 +29,8 @@ const GlobalStyle = createGlobalStyle`
         --background-color2 : #CAEDFF;
         --border-color : black;
 
-        --header-color : #A1C2F1;
+        --header-color : #8ECDDD;
+        --about-color : #A1C2F1;
         --font-color1 : #000;
         --font-color2 : #0A6EBD;
         --font-hover-color : #FBF0B2;
@@ -47,7 +48,8 @@ const GlobalStyle = createGlobalStyle`
         --background-color2 : #1F6E8C;
         --border-color : white;
 
-        --header-color : #0A6EBD;
+        --header-color : #26577C;
+        --about-color : #0A6EBD;
         --font-color1 : #fff;
         --font-color2 : #A7ECEE;
         --font-hover-color : #FFC436;

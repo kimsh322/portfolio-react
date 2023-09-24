@@ -33,7 +33,6 @@ const InfoCard = () => {
           <a href="https://github.com/kimsh322" className="link">
             <span className="tag">GITHUB</span>
             <img src={githubIcon} alt="github-icon" className="github-icon" />
-            <span className="hover-text">hover!</span>
           </a>
         </div>
         <div
@@ -44,7 +43,6 @@ const InfoCard = () => {
           <a href="https://riverpigeon.tistory.com/" className="link">
             <span className="tag">BLOG</span>
             <img src={tistoryIcon} alt="tistory-icon" className="tistory-icon" />
-            <span className="hover-text">hover!</span>
           </a>
         </div>
       </div>
@@ -63,7 +61,7 @@ const InfoCardContainer = styled.div`
   width: 30%;
   height: 70vh;
   border-radius: 10px;
-  background-color: var(--header-color);
+  background-color: var(--about-color);
   margin-right: 5%;
   box-shadow: var(--stackcard-shadow) 0px 3px 5px;
   .tag {
@@ -104,10 +102,6 @@ const InfoCardContainer = styled.div`
       }
       .tistory-icon {
         width: 180px;
-      }
-      .hover-text {
-        font-size: 0.5em;
-        margin-top: 4px;
       }
     }
   }
